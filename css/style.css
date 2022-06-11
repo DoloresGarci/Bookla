@@ -1,0 +1,985 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap');
+
+@font-face {
+    font-family: Elephant;
+    src: url(../font/ELEPHNT.TTF);
+  }
+
+body{
+    margin-left: 0%;
+    margin-top: 1.25em;
+    background-color: #F6E3D3;
+}
+header{
+    width: 85%;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    justify-content:flex-end;
+    position: fixed;
+    z-index: 10;
+    background-color: #F6E3D3;
+    top: 0px;
+    padding-top: 1.25em;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+
+.logo{
+    margin-right: auto;
+    display: inline-block;
+}
+.menu{
+    list-style: none;
+    display: inline-block;
+    color: #000000;
+    background-color: #F6E3D3;
+}
+.menu__hambur{
+    display: none;
+}
+li, .menu__item, button {
+    font-family: "Almarai", sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+}
+.menu__item:hover{
+    font-weight: 500;
+}
+.menu li{
+    display: inline-block;
+    padding: 0px 20px;
+    background-color: #F6E3D3;
+}
+
+.menu li a {
+    transition: all 0.3s ease 0s;
+}
+.menu__cta, .landing__cta, .form__cta{
+    padding: 9px 25px;
+    background-color: #F36A46;
+    border: none;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F6E3D3;
+}
+
+.menu__cta:hover, .landing__cta:hover, .regala__cta:hover{
+    background-color: #e16141;
+}
+
+h2{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+h3{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: #000000;
+}
+.text--grande{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #000000;
+}
+
+/*---------LANDING HOME----------*/
+.landing{
+    margin-left: 7em;
+    margin-top: 8em;
+    display: grid;
+    grid-template-areas: 
+    "img titulo"
+    "img texto"
+    "img botones";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 3em;
+}
+.landing__photo{
+    width: 100%;
+    grid-area: img;
+}
+.landing__titulo{
+    grid-area: titulo;
+    margin-top: 1em;
+}
+.landing__texto{
+    grid-area: texto;
+}
+.landing__buttoms{
+    grid-area: botones;
+    display: inline-block;
+}
+.landing__planes{
+    padding: 9px 25px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0.1em solid #F36A46;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F36A46;
+}
+
+.landing__planes:hover{
+    border: 0.1em solid #e16141;
+    color: #e16141;
+}
+
+/*.landing{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.landing__photo{
+    margin-top: 5em;
+    width: 40%;
+    display: inline-block;
+}
+
+.landing__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-left: 3em;
+    display: inline-block;
+    position: absolute;
+    bottom: 50%;
+}
+.landing__buttons{
+    display: inline-block;
+    padding-left: 2em;
+    position: absolute;
+    bottom: 40%;
+}
+.landing__cta{     
+    padding: 9px 25px;
+    cursor: pointer;
+}
+.landing__planes{
+    padding: 9px 25px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0.1em solid #F36A46;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F36A46;
+}
+
+.landing__planes:hover{
+    border: 0.1em solid #e16141;
+    color: #e16141;
+}
+
+.landing__form{
+    display: inline-block;
+}*/
+
+
+.colecciones{
+    margin-top: 2em;
+    padding: 3em 7em;
+}
+.colecciones__card--titulo{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 29px;
+    color: #000000;
+    text-decoration: none;
+}
+.colecciones__1, .colecciones__2, .colecciones__3{
+    display: inline-block;
+    background-color: #f5e7dc;
+    width: 24%;
+    padding: 2.5em;
+    margin: 1em;
+    box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+    border-radius: 13px;
+    height: 20em;
+}
+
+/*----------EXPERIENCIA----------*/
+.experiencia{
+    padding-left: 7em;
+    display: grid;
+    grid-template-areas: 
+    "texto img";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: auto;
+    grid-column-gap: 3em;
+}
+.experiencia__photo{
+    margin-top: 5em;
+    width: 100%;
+    display: inline-block;
+    grid-area: img;
+}
+
+.experiencia__text{
+    margin: auto 0px;
+    padding-right: 3em;
+    display: inline-block;
+    grid-area: texto;
+}
+
+/*----------PLAN----------*/
+.plan{
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F36A46;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5em;
+    text-align: center;
+}
+.plan__titulo{
+    color: #F6E3D3;
+    font-size: 34px;
+}
+.plan__text{
+    width: 70%;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #F6E3D3;
+    margin: 0 auto 2em;
+}
+.plan__test{
+    padding: 9px 25px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0.1em solid #F6E3D3;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F6E3D3;
+}
+
+.plan__test:hover{
+    border:0.1em solid #F36A46;
+    background-color: #F6E3D3;
+    color: #F36A46;
+}
+
+/*----------REGALA----------*/
+.regala{
+
+    margin-left: 7em;
+    margin-top: 4em;
+    display: grid;
+    grid-template-areas: 
+    "img titulo"
+    "img texto"
+    "img botones";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 3em;
+}
+.regala__photo{
+    width: 100%;
+    display: inline-block;
+    grid-area: img;
+}
+
+.regala__titulo{
+    grid-area: titulo;
+    margin: auto 0px;
+    display: inline-block;
+}
+.regala__texto{
+    grid-area: texto;
+    margin: auto 0px;
+    display: inline-block;
+}
+
+.regala__cta{
+    padding: 9px 25px;
+    background-color: #F36A46;
+    border: none;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: #F6E3D3;
+    grid-area: botones;
+    margin: auto 0px;
+    display: inline-block;
+}
+
+
+/*-----------FOOTER-----------*/
+.footer{
+    margin-top: 4em;
+    padding: 1.75em 7em;
+    background-color: #F36A46;
+}
+
+.footer__text{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    margin-top: 1.5em;
+    position: relative;
+    top: 0%;
+
+}
+.footer__col1,.footer__col2,.footer__col3{
+    list-style-type: none;
+    margin: 0px 6em 0px 0em;
+    padding: 0px;
+    display: inline-block;
+}
+.footer__item{
+    color: #F6E3D3;
+    display: block;
+    padding: 0.3em 0px;
+    text-decoration: none;
+}
+
+/*----------FUNCIONAMIENTO HTML----------*/
+
+.funcion{
+    margin-left: 7em;
+    margin-top: 8em;
+    display: grid;
+    grid-template-areas: 
+    "img titulo"
+    "img texto";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 3em;
+}
+.funcion__photo{
+    width: 100%;
+    grid-area: img;
+}
+.funcion__titulo{
+    grid-area: titulo;
+    margin-top: 1em;
+}
+.funcion__texto{
+    grid-area: texto;
+}
+
+/*-----------REGALOS---------*/
+
+.regalos{
+    align-items: center;
+    margin-top: 6em;
+    padding-left: 7em;
+    padding-right: 7em;
+    display: grid;
+    grid-template-areas: 
+    "img ."
+    "img titulo"
+    "img texto"
+    "img .";
+    grid-template-columns: 45% 42%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5em;
+}
+.regalos__photo{
+    width: 100%;
+    display: inline-block;
+    grid-area: img;
+}
+.regalos__titulo{
+
+    grid-area: titulo;
+}
+.regalos__text{
+    margin: auto 0px;
+    display: inline-block;
+    color: #000000;
+    grid-area: texto;
+}
+
+.regalos__form{
+    display: inline-block;
+}
+
+/*---------ARTISTAS---------*/
+.artistas{  
+    margin-top: 3em;
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F36A46;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.artistas__titulo{
+    color: #F6E3D3;
+    font-size: 34px;
+    text-align: center;
+}
+.artistas__text{
+    width: 70%;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #F6E3D3;
+    margin: 0 auto 2em;
+    text-align: center;
+}
+
+.artistas__button{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    display: inline-block;
+}
+.artistas__arrow{
+    display: inline-block;
+}
+
+.artistas__cards{
+    display: inline;
+}
+
+.artistas__card1, .artistas__card2, .artistas__card3{
+    display: inline-block;
+    background-color: #F6E3D3;
+    width: 24%;
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 13px;
+} 
+
+.artistas__img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.artistas__card--titulo{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 29px;
+    color: #000000;
+}
+.artistas__card--text{
+    margin-top: 0.5em;
+    display: block;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    color: #000000;
+}
+
+/*---------COLECCIONES---------*/
+
+/*---------NAVBAR----------*/
+.colecciones--nav{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.3em;
+    margin-top: 5em;
+    width: 100%;
+    text-align: center;
+}
+
+.colecciones__titulo{
+    text-align: center;
+}
+
+.colecciones__ficcion, .colecciones__feminismo, .colecciones__nacional{
+    padding: 2.5em;
+    color: #000000;
+    text-decoration: none;
+}
+
+.colecciones__ficcion:hover, .colecciones__feminismo:hover, .colecciones__nacional:hover{
+    padding: 2.5em;
+    color: #F36A46;
+    text-decoration: underline solid #F36A46 3px;
+    font-weight: 700;
+}
+
+/*---------PRESENTACION----------*/
+
+/*---------PUNTOS----------*/
+
+.puntos{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+
+}
+.introc{
+    padding-left: 7em;
+    margin-top: 4em;
+    padding-right: 7em;
+    text-align: center;
+}
+.puntos__photo{
+    margin-top: 5em;
+    width: 40%;
+    display: inline-block;
+}
+
+.puntos__lista{
+
+    margin: auto 0px;
+    padding-left: 3em;
+    display: inline-block;
+    position: absolute;
+    bottom: 4%;
+}
+
+.puntos__lista2, .form__list2{
+    margin: 0 0 1.7em ;
+}
+
+.puntos__importantes{
+    display: inline-block;
+}
+
+.puntos__item{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6em;
+    color: #000000;
+    padding-bottom: 1em;
+}
+
+/*----------FORM----------*/
+
+.form{
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.form__box{
+    margin-top: 5em;
+    width: 40%;
+    display: inline-block;
+    background-color: #f5e7dc;
+    border-radius: 13px;
+    box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+    padding: 1.5em;
+}
+
+.form__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-right: 3em;
+    display: inline-block;
+}
+.form__list{
+    padding-bottom: 1em;
+}
+
+.form__item{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2;
+    color: #000000;
+
+}
+
+.form__buttons{
+    display: inline-block;
+    padding-left: 2em;
+    bottom: 40%;
+}
+.form__cta{     
+    padding: 9px 25px;
+    cursor: pointer;
+}
+
+/*---------BOX ANTERIORES DESDE COLECCION---------*/
+.boxan{  
+    margin-top: 1em;
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F6E3D3;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.boxant__titulo{
+    text-align: center;
+}
+
+.boxan__card1, .boxan__card2, .boxan__card3{
+    display: inline-block;
+    background-color: #f5e7dc;
+    width: 24%;
+    padding: 1.5em;
+    margin: 1em;
+    border-radius: 13px;
+    box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+} 
+
+.boxan__img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.boxan__card--titulo{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 29px;
+    color: #000000;
+}
+.boxan__card--text{
+    margin-top: 0.5em;
+    display: block;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    color: #000000;
+}
+
+/*---------BOXES ANTERIORES----------*/
+.boxficcion{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+
+}
+.boxficcion__photo{
+    margin-top: 5em;
+    width: 40%;
+    display: inline-block;
+}
+
+.boxficcion__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-left: 3em;
+    display: inline-block;
+    position: absolute;
+    bottom: 35%;
+}
+.boxficcion2{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.boxficcion2__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-right: 3em;
+    display: inline-block;
+    position: relative;
+    bottom: 30%;
+}
+.boxficcion3{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.boxficcion3__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-left: 3em;
+    display: inline-block;
+}
+
+.boxficcion__mes{
+    color: #F36A46;
+    text-decoration: overline solid #F36A46 3px;font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    margin: 1.5em 0 1em;
+}
+
+/*---------SUSCRIPCION--------*/
+.suscripcion{
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F36A46;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5em;
+    text-align: center;
+}
+.suscripcion__titulo{
+    color: #F6E3D3;
+    font-size: 34px;
+}
+.suscripcion__text{
+    width: 70%;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #F6E3D3;
+    margin: 0 auto 2em;
+}
+.suscripcion__sus{
+    padding: 9px 25px;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: 0.1em solid #F6E3D3;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F6E3D3;
+}
+
+.suscripcion__sus:hover{
+    border:0.1em solid #F36A46;
+    background-color: #F6E3D3;
+    color: #F36A46;
+}
+
+/*----------REGALA--------*/
+.intror{
+    padding-left: 7em;
+    margin-top: 9em;
+    padding-right: 7em;
+    text-align: center;
+}
+
+.regbox{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+}
+.regbox__photo{
+    margin-top: 5em;
+    width: 40%;
+    display: inline-block;
+}
+
+.regbox__text{
+    width: 45%;
+    margin: auto 0px;
+    padding-left: 3em;
+    display: inline-block;
+    position: absolute;
+    bottom: 10%;
+}
+.regbox__buttons{
+    display: inline-block;
+    padding-left: 2em;
+    position: absolute;
+    bottom: 2%;
+}
+.landing__cta{     
+    padding: 9px 25px;
+    cursor: pointer;
+}
+
+.regbox__form{
+    display: inline-block;
+}
+.reggift__form{
+    display: inline-block;
+    width: 45%;
+}
+.reggift__text{
+    margin: auto 0px;
+    padding-right: 3em;
+    display: inline-block;
+}
+.reggift__buttons{
+    display: inline-block;
+}
+.reggift__cta{
+    padding: 9px 25px;
+    background-color: #F36A46;
+    border: none;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: #F6E3D3;
+}
+
+.reggift__cta:hover{
+    background-color: #e16141;
+}
+
+
+@media screen and (max-width: 479px){
+    h2{
+        font-size: 30px;
+    }
+    header{
+            width: 84%;
+            height: 2em;
+            display: flex;
+            align-items: center;
+            margin-bottom: 2em;
+            justify-content:flex-end;
+            position: fixed;
+            z-index: 10;
+            background-color: #F6E3D3;
+            top: 0px;
+            padding: 1.7em 2em 1.7em;
+    }
+    .menu, .menu__cta{
+        display: none;
+    }
+    .menu__hambur{
+        display: flex;
+    }
+    .landing{
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-top: 5em;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto"
+        "botones"
+        "img";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        grid-column-gap: 2em;
+        row-gap: 1em;
+    }
+    .landing__titulo{
+        margin-bottom: 0;
+        text-align: center;
+    }
+    .text--grande{
+        font-size: 1.1em;
+        text-align: center;
+        padding-top: 0px;
+        margin-top: 0;
+    }
+    .landing__buttons{
+       margin: 0 auto;
+       text-align: center;
+    }
+
+    /*>Colecciones*/
+
+    .colecciones{
+        margin-top: 2em;
+        padding: 1em 2em;
+    }
+    .colecciones__card--titulo{
+        font-family: 'Elephant';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3em;
+        color: #000000;
+        text-decoration: none;
+    }
+    .colecciones__1, .colecciones__2, .colecciones__3{
+        /*display: inline-block;*/
+        background-color: #f5e7dc;
+        width: 75%;
+        box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+        border-radius: 13px;
+        height: 15em;
+    }
+
+    /*Experiencia*/
+    .experiencia{
+        padding-left: 2em;
+        display: grid;
+        grid-template-areas: 
+        "texto"
+        "img";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        row-gap: 1em;
+    }
+    .experiencia__photo{
+        margin-top: 1em;
+        width: 100%;
+        padding-right: 2em;
+        box-sizing: border-box;
+    }
+
+    .experiencia__titulo{
+        text-align: center;
+    }
+    
+    .experiencia__text{
+        margin: auto 0px;
+        width: auto;
+        padding-right: 2em;
+    }
+
+    /*Plan*/
+    .plan{
+        padding: 2em 2em;
+    }
+    .plan__text{
+        width: 100%;
+    }
+    .plan__titulo{
+        font-size: 30px;
+    }
+
+    /*Regala*/
+    .regala{
+        margin:3em 2em;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto"
+        "botones"
+        "img";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+        row-gap: 2em;
+        text-align: center;
+    }
+    .funcion{
+        margin: 5em 2em 3em;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto"
+        "img";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, auto);
+        grid-column-gap: 3em;
+        text-align: center;
+    }
+    .regalos{
+        align-items: center;
+        margin-top: 2em;
+        padding: 0 2em;
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "texto"
+        "img";
+        grid-template-columns:auto;
+        grid-template-rows: repeat(3, auto);
+        grid-row-gap: 2em;
+        text-align: center;
+    }
+}

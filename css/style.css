@@ -52,6 +52,9 @@ ul{
     margin-bottom: 0%;
     margin-top: 0%;
 }
+a{
+    text-decoration: none;
+}
 .menu__item:hover{
     font-weight: 500;
 }
@@ -80,6 +83,12 @@ ul{
     background-color: #e16141;
 }
 
+.dropdown-menu.show{
+    padding: 1em;
+    background-color: #f5e7dc;
+    border-color: none;
+}
+
 h2{
     font-family: 'Elephant';
     font-style: normal;
@@ -100,6 +109,7 @@ h3{
     font-style: normal;
     font-weight: 300;
     font-size: 1.2em;
+    margin-bottom: 1em;
     color: #000000;
 }
 
@@ -165,7 +175,7 @@ h3{
 .colecciones__1, .colecciones__2, .colecciones__3{
     display: inline-block;
     background-color: #f5e7dc;
-    width: 24%;
+    width: 22%;
     padding: 2.5em;
     margin: 1em;
     box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
@@ -213,6 +223,7 @@ h3{
 .plan__titulo{
     color: #F6E3D3;
     font-size: 34px;
+    margin-bottom:1em;
 }
 .plan__text{
     width: 70%;
@@ -823,7 +834,7 @@ h3{
         grid-column-gap: 2em;
         row-gap: 1em;
     }
-    .landing__titulo{
+    .landing__title{
         margin-bottom: 0;
         text-align: center;
     }

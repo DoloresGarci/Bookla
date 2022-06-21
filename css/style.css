@@ -388,14 +388,18 @@ ul .colecciones__informacion{
     margin-top: 8em;
     display: grid;
     grid-template-areas: 
+    "img ."
     "img titulo"
-    "img texto";
+    "img texto"
+    "img .";
     grid-template-columns: 42% 42%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr 1fr;
     grid-column-gap: 3em;
 }
 .funcion__photo{
-    width: 100%;
+    width: auto;
+    height: 30rem;
+    padding-left: 15%;
     grid-area: img;
 }
 .funcion__titulo{
@@ -447,7 +451,7 @@ ul .colecciones__informacion{
 .artistas{  
     margin-top: 3em;
     padding-left: 7em;
-    padding-right: 7em;
+    padding-right: 6em;
     background-color: #F36A46;
     padding-top: 3rem;
     padding-bottom: 3rem;

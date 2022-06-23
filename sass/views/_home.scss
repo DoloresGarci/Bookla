@@ -1,0 +1,81 @@
+.landing{
+    margin-left: 7em;
+    margin-top: 8em;
+    display: grid;
+    grid-template-areas: 
+    "img titulo"
+    "img texto"
+    "img botones";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column-gap: 3em;
+    .landing__photo{
+        width: 100%;
+        grid-area: img;
+    }
+    .landing__titulo{
+        grid-area: titulo;
+        margin-top: 1em;
+    }
+    .landing__texto{
+        grid-area: texto;
+    }
+    .landing__buttoms{
+        grid-area: botones;
+        display: inline-block;
+        .landing__cta{
+            padding: 9px 25px;
+            background-color: $naranja;
+            border: none;
+            border-radius: 0.7em;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+            margin-left: 1em;
+            cursor: pointer;
+            color: $fondo;
+            .landing__cta:hover{
+                background-color: $naranja--oscuro;
+            }
+        }
+        .landing__planes{
+            padding: 9px 25px;
+            background-color: transparent;
+            box-sizing: border-box;
+            border: 0.1em solid $naranja;
+            border-radius: 0.7em;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+            margin-left: 1em;
+            cursor: pointer;
+            color: $naranja;
+            .landing__planes:hover{
+                border: 0.1em solid $naranja--oscuro;
+                color: $naranja--oscuro;
+            }
+        } 
+    }
+}
+.colecciones{
+    margin-top: 2em;
+    padding: 3em 7em;
+    .colecciones__1, .colecciones__2, .colecciones__3{
+        display: inline-block;
+        background-color: $fondo--cards;
+        width: 24%;
+        padding: 2.5em;
+        margin: 1em;
+        box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+        border-radius: 13px;
+        height: 20em;
+        .colecciones__card--titulo{
+            font-family: 'Elephant';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.5em;
+            line-height: 29px;
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+}
+

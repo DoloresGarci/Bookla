@@ -142,58 +142,6 @@ h3{
     color: #e16141;
 }
 
-/*.landing{
-    align-items: center;
-    padding-left: 7em;
-    padding-right: 7em;
-}
-.landing__photo{
-    margin-top: 5em;
-    width: 40%;
-    display: inline-block;
-}
-
-.landing__text{
-    width: 45%;
-    margin: auto 0px;
-    padding-left: 3em;
-    display: inline-block;
-    position: absolute;
-    bottom: 50%;
-}
-.landing__buttons{
-    display: inline-block;
-    padding-left: 2em;
-    position: absolute;
-    bottom: 40%;
-}
-.landing__cta{     
-    padding: 9px 25px;
-    cursor: pointer;
-}
-.landing__planes{
-    padding: 9px 25px;
-    background-color: transparent;
-    box-sizing: border-box;
-    border: 0.1em solid #F36A46;
-    border-radius: 0.7em;
-    font-weight: 400;
-    transition: all 0.3s ease 0s;
-    margin-left: 1em;
-    cursor: pointer;
-    color: #F36A46;
-}
-
-.landing__planes:hover{
-    border: 0.1em solid #e16141;
-    color: #e16141;
-}
-
-.landing__form{
-    display: inline-block;
-}*/
-
-
 .colecciones{
     margin-top: 2em;
     padding: 3em 7em;
@@ -345,7 +293,6 @@ h3{
     margin-top: 1.5em;
     position: relative;
     top: 0%;
-
 }
 .footer__col1,.footer__col2,.footer__col3{
     list-style-type: none;

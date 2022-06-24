@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
+@font-face {
+  font-family: Elephant;
+  src: url(../font/ELEPHNT.TTF); }
+
+body {
+  margin-left: 0%;
+  margin-top: 1.25em;
+  background-color: #F6E3D3; }
+
+li, button {
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000000; }
+
+h2 {
+  font-family: 'Elephant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px; }
+
+h3 {
+  font-family: 'Elephant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 39px;
+  color: #000000; }
+
+header {
+  width: 85%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 10;
+  background-color: #F6E3D3;
+  top: 0px;
+  padding-top: 1.25em;
+  padding-left: 7em;
+  padding-right: 7em; }
+  header .logo {
+    margin-right: auto;
+    display: inline-block; }
+  header .menu {
+    list-style: none;
+    display: inline-block;
+    color: #000000;
+    background-color: #F6E3D3; }
+    header .menu .menu__item {
+      font-family: "Almarai", sans-serif;
+      font-weight: 300;
+      font-size: 1em;
+      text-decoration: none;
+      color: #000000; }
+    header .menu .menu li {
+      display: inline-block;
+      padding: 0px 20px;
+      background-color: #F6E3D3; }
+    header .menu .menu li a {
+      transition: all 0.3s ease 0s; }
+  header .menu__cta {
+    padding: 9px 25px;
+    background-color: #F36A46;
+    border: none;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #F6E3D3; }
+    header .menu__cta:hover {
+      background-color: #e16141; }
+
+.footer {
+  margin-top: 4em;
+  padding: 1.75em 7em;
+  background-color: #F36A46; }
+  .footer .footer__text {
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    margin-top: 1.5em;
+    position: relative;
+    top: 0%; }
+    .footer .footer__text .footer__col1, .footer .footer__text .footer__col2, .footer .footer__text .footer__col3 {
+      list-style-type: none;
+      margin: 0px 6em 0px 0em;
+      padding: 0px;
+      display: inline-block; }
+      .footer .footer__text .footer__col1 .footer__item, .footer .footer__text .footer__col2 .footer__item, .footer .footer__text .footer__col3 .footer__item {
+        color: #F6E3D3;
+        display: block;
+        padding: 0.3em 0px;
+        text-decoration: none; }
+
+.landing {
+  margin-left: 7em;
+  margin-top: 8em;
+  display: grid;
+  grid-template-areas: "img titulo" "img texto" "img botones";
+  grid-template-columns: 42% 42%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-column-gap: 3em; }
+  .landing .landing__photo {
+    width: 100%;
+    grid-area: img; }
+  .landing .landing__titulo {
+    grid-area: titulo;
+    margin-top: 1em; }
+  .landing .landing__texto {
+    grid-area: texto; }
+  .landing .landing__buttoms {
+    grid-area: botones;
+    display: inline-block; }
+    .landing .landing__buttoms .landing__cta {
+      padding: 9px 25px;
+      background-color: #F36A46;
+      border: none;
+      border-radius: 0.7em;
+      font-weight: 400;
+      transition: all 0.3s ease 0s;
+      margin-left: 1em;
+      cursor: pointer;
+      color: #F6E3D3; }
+      .landing .landing__buttoms .landing__cta .landing__cta:hover {
+        background-color: #e16141; }
+    .landing .landing__buttoms .landing__planes {
+      padding: 9px 25px;
+      background-color: transparent;
+      box-sizing: border-box;
+      border: 0.1em solid #F36A46;
+      border-radius: 0.7em;
+      font-weight: 400;
+      transition: all 0.3s ease 0s;
+      margin-left: 1em;
+      cursor: pointer;
+      color: #F36A46; }
+      .landing .landing__buttoms .landing__planes .landing__planes:hover {
+        border: 0.1em solid #e16141;
+        color: #e16141; }
+
+.colecciones {
+  margin-top: 2em;
+  padding: 3em 7em; }
+  .colecciones .colecciones__1, .colecciones .colecciones__2, .colecciones .colecciones__3 {
+    display: inline-block;
+    background-color: #f5e7dc;
+    width: 24%;
+    padding: 2.5em;
+    margin: 1em;
+    box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+    border-radius: 13px;
+    height: 20em; }
+    .colecciones .colecciones__1 .colecciones__card--titulo, .colecciones .colecciones__2 .colecciones__card--titulo, .colecciones .colecciones__3 .colecciones__card--titulo {
+      font-family: 'Elephant';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.5em;
+      line-height: 29px;
+      color: #000000;
+      text-decoration: none; }

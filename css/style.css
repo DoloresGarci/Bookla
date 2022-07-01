@@ -4,7 +4,9 @@
     font-family: Elephant;
     src: url(../font/ELEPHNT.TTF);
   }
-
+*{
+    box-sizing: unset;
+}
 body{
     margin-left: 0%;
     margin-top: 1.25em;
@@ -46,6 +48,14 @@ li, .menu__item, button {
     text-decoration: none;
     color: #000000;
 }
+ul{
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
 .menu__item:hover{
     font-weight: 500;
 }
@@ -58,6 +68,18 @@ li, .menu__item, button {
 .menu li a {
     transition: all 0.3s ease 0s;
 }
+
+.boton--principal{
+    padding: 16px 40px;
+    background-color: #F36A46;
+    border: none;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: #F6E3D3;
+}
+
 .menu__cta, .landing__cta, .form__cta{
     padding: 9px 25px;
     background-color: #F36A46;
@@ -65,13 +87,19 @@ li, .menu__item, button {
     border-radius: 0.7em;
     font-weight: 400;
     transition: all 0.3s ease 0s;
-    margin-left: 1em;
     cursor: pointer;
     color: #F6E3D3;
 }
 
-.menu__cta:hover, .landing__cta:hover, .regala__cta:hover{
+
+.menu__cta:hover, .landing__cta:hover, .regala__cta:hover, .boton--principal:hover{
     background-color: #e16141;
+}
+
+.dropdown-menu.show{
+    padding: 1em;
+    background-color: #f5e7dc;
+    border-color: none;
 }
 
 h2{
@@ -79,6 +107,7 @@ h2{
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
+    line-height: normal;
 }
 h3{
     font-family: 'Elephant';
@@ -93,6 +122,7 @@ h3{
     font-style: normal;
     font-weight: 300;
     font-size: 1.2em;
+    margin-bottom: 1em;
     color: #000000;
 }
 
@@ -113,9 +143,9 @@ h3{
     width: 100%;
     grid-area: img;
 }
-.landing__titulo{
+.landing__title{
     grid-area: titulo;
-    margin-top: 1em;
+    padding-top: 1em;
 }
 .landing__texto{
     grid-area: texto;
@@ -125,7 +155,7 @@ h3{
     display: inline-block;
 }
 .landing__planes{
-    padding: 9px 25px;
+    padding: 16px 40px;
     background-color: transparent;
     box-sizing: border-box;
     border: 0.1em solid #F36A46;
@@ -154,36 +184,78 @@ h3{
     line-height: 29px;
     color: #000000;
     text-decoration: none;
+    margin-bottom: 1rem;
 }
 .colecciones__1, .colecciones__2, .colecciones__3{
     display: inline-block;
     background-color: #f5e7dc;
-    width: 24%;
+    width: 22%;
     padding: 2.5em;
     margin: 1em;
     box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
     border-radius: 13px;
     height: 20em;
 }
+ul .colecciones__informacion{
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+.colecciones__cards{
+    column-gap: 1.5em;
+}
+.colecciones__texto{
+    font-size: 1em;
+    padding: 1.5rem 0px 0px;
+}
+.colecciones__texto:hover, .colecciones__card--titulo:hover{
+    color: #000000;
+}
+
+
+.colecciones__cta{
+    margin-top: 2rem;
+    margin-left: 25%;
+    padding: 9px 25px;
+    background-color:transparent ;
+    border: 2px solid #F36A46;
+    border-radius: 0.7em;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    color: #F36A46;
+}
+
+
+.colecciones__cta:hover{
+    border: 2px solid #e16141;
+    color: #e16141;
+}
 
 /*----------EXPERIENCIA----------*/
 .experiencia{
+    margin-top: 5rem;
     padding-left: 7em;
     display: grid;
     grid-template-areas: 
+    "titulo img"
     "texto img";
     grid-template-columns: 42% 42%;
-    grid-template-rows: auto;
+    grid-template-rows:auto auto;
     grid-column-gap: 3em;
 }
 .experiencia__photo{
-    margin-top: 5em;
+
     width: 100%;
     display: inline-block;
     grid-area: img;
 }
-
-.experiencia__text{
+.experiencia__titulo{
+    margin: auto 0px;
+    padding-right: 3em;
+    display: inline-block;
+    grid-area: titulo;
+}
+.experiencia__texto{
     margin: auto 0px;
     padding-right: 3em;
     display: inline-block;
@@ -203,6 +275,7 @@ h3{
 .plan__titulo{
     color: #F6E3D3;
     font-size: 34px;
+    margin-bottom:1em;
 }
 .plan__text{
     width: 70%;
@@ -314,14 +387,18 @@ h3{
     margin-top: 8em;
     display: grid;
     grid-template-areas: 
+    "img ."
     "img titulo"
-    "img texto";
+    "img texto"
+    "img .";
     grid-template-columns: 42% 42%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr 1fr;
     grid-column-gap: 3em;
 }
 .funcion__photo{
-    width: 100%;
+    width: auto;
+    height: 30rem;
+    padding-left: 15%;
     grid-area: img;
 }
 .funcion__titulo{
@@ -369,7 +446,7 @@ h3{
 .artistas{  
     margin-top: 3em;
     padding-left: 7em;
-    padding-right: 7em;
+    padding-right: 6em;
     background-color: #F36A46;
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -808,7 +885,7 @@ h3{
         grid-column-gap: 2em;
         row-gap: 1em;
     }
-    .landing__titulo{
+    .landing__title{
         margin-bottom: 0;
         text-align: center;
     }

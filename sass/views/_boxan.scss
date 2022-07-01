@@ -1,0 +1,118 @@
+.boxficcion{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+    .boxficcion__photo{
+        margin-top: 5em;
+        width: 40%;
+        display: inline-block;
+    }
+    .boxficcion__text{
+        width: 45%;
+        margin: auto 0px;
+        padding-left: 3em;
+        display: inline-block;
+        position: absolute;
+        bottom: 35%;
+        .boxficcion__mes{
+            color: #F36A46;
+            text-decoration: overline solid #F36A46 3px;
+            font-family: 'Elephant';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4em;
+            margin: 1.5em 0 1em;
+        }
+    }
+}
+
+
+
+.boxficcion2{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+    .boxficcion2__text{
+        width: 45%;
+        margin: auto 0px;
+        padding-right: 3em;
+        display: inline-block;
+        position: relative;
+        bottom: 30%;
+        .boxficcion__mes{
+            color: #F36A46;
+            text-decoration: overline solid #F36A46 3px;
+            font-family: 'Elephant';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4em;
+            margin: 1.5em 0 1em;
+        }
+    }
+}
+.boxficcion3{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+    .boxficcion3__text{
+        width: 45%;
+        margin: auto 0px;
+        padding-left: 3em;
+        display: inline-block;
+        .boxficcion__mes{
+            color: #F36A46;
+            text-decoration: overline solid #F36A46 3px;
+            font-family: 'Elephant';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 1.4em;
+            margin: 1.5em 0 1em;
+        }
+    }
+}
+.suscripcion{
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F36A46;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 5em;
+    text-align: center;
+    .suscripcion__titulo{
+        color: #F6E3D3;
+        font-size: 34px;
+    }
+    .suscripcion__text{
+        width: 70%;
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.2em;
+        color: #F6E3D3;
+        margin: 0 auto 2em;
+    }
+    .suscripcion__sus{
+        padding: 9px 25px;
+        background-color: transparent;
+        box-sizing: border-box;
+        border: 0.1em solid #F6E3D3;
+        border-radius: 0.7em;
+        font-weight: 400;
+        transition: all 0.3s ease 0s;
+        margin-left: 1em;
+        cursor: pointer;
+        color: #F6E3D3;
+        .suscripcion__sus:hover{
+            border:0.1em solid #F36A46;
+            background-color: #F6E3D3;
+            color: #F36A46;
+        }
+    }
+}
+
+
+
+
+
+
+

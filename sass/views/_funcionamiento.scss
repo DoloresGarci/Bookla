@@ -1,0 +1,139 @@
+.funcion{
+    margin-left: 7em;
+    margin-top: 8em;
+    display: grid;
+    grid-template-areas: 
+    "img titulo"
+    "img texto";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 3em;
+    .funcion__photo{
+        width: 100%;
+        grid-area: img;
+    }
+    .funcion__titulo{
+        grid-area: titulo;
+        margin-top: 1em;
+    }
+    .funcion__texto{
+        grid-area: texto;
+    }
+}
+.experiencia{
+    padding-left: 7em;
+    display: grid;
+    grid-template-areas: 
+    "texto img";
+    grid-template-columns: 42% 42%;
+    grid-template-rows: auto;
+    grid-column-gap: 3em;
+    .experiencia__text{
+        margin: auto 0px;
+        padding-right: 3em;
+        display: inline-block;
+        grid-area: texto;
+    }
+    .experiencia__photo{
+        margin-top: 5em;
+        width: 100%;
+        display: inline-block;
+        grid-area: img;
+    } 
+}
+.regalos{
+    align-items: center;
+    margin-top: 6em;
+    padding-left: 7em;
+    padding-right: 7em;
+    display: grid;
+    grid-template-areas: 
+    "img ."
+    "img titulo"
+    "img texto"
+    "img .";
+    grid-template-columns: 45% 42%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 5em;
+    .regalos__photo{
+        width: 100%;
+        display: inline-block;
+        grid-area: img;
+    }
+    .regalos__titulo{
+    
+        grid-area: titulo;
+    }
+    .regalos__text{
+        margin: auto 0px;
+        display: inline-block;
+        color: #000000;
+        grid-area: texto;
+    }
+}
+.artistas{  
+    margin-top: 3em;
+    padding-left: 7em;
+    padding-right: 7em;
+    background-color: #F36A46;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .artistas__titulo{
+        color: #F6E3D3;
+        font-size: 34px;
+        text-align: center;
+    }
+    .artistas__text{
+        width: 70%;
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.2em;
+        color: #F6E3D3;
+        margin: 0 auto 2em;
+        text-align: center;
+    }
+    .artistas__arrow{
+        display: inline-block;
+        .artistas__button{
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+        }
+    }  
+    .artistas__cards{
+        display: inline;
+        .artistas__card1, .artistas__card2, .artistas__card3{
+            display: inline-block;
+            background-color: #F6E3D3;
+            width: 24%;
+            padding: 1.5em;
+            margin: 1em;
+            border-radius: 13px;
+            .artistas__img{
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            .artistas__card--titulo{
+                font-family: 'Elephant';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.5em;
+                line-height: 29px;
+                color: #000000;
+            }
+            .artistas__card--text{
+                margin-top: 0.5em;
+                display: block;
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1em;
+                color: #000000;
+            }
+        } 
+    }
+}
+
+

@@ -25,3 +25,23 @@ h3{
     line-height: 39px;
     color: #000000;
 }
+.text--grande{
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    color: #000000;
+}
+
+@media screen and (max-width: 479px){
+    h2{
+        font-size: 30px;
+    }
+    .text--grande{
+        font-size: 1.1em;
+        text-align: center;
+        padding-top: 0px;
+        margin-top: 0;
+    }
+}

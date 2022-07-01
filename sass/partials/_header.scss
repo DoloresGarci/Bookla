@@ -51,4 +51,43 @@ header{
             background-color: #e16141;
         }
     }
+    .menu__hambur{
+        display: none;
+        .dropdown-menu.show{
+            padding: 1em;
+            background-color: #f5e7dc;
+            border-color: none;
+            .menu__item{
+                font-family: "Almarai", sans-serif;
+                font-weight: 300;
+                font-size: 1em;
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}
+@media screen and (max-width: 479px){
+    header{
+        width: 84%;
+        height: 2em;
+       display: flex;
+        align-items: center;
+        margin-bottom: 2em;
+        justify-content:flex-end;
+        position: fixed;
+        z-index: 10;
+        background-color: #F6E3D3;
+        top: 0px;
+        padding: 1.7em 2em 1.7em;
+    }
+    .menu{
+        display: none;
+        .menu__cta{
+            display: none;
+        }
+    } 
+    .menu__hambur{
+        display: flex;
+    }
 }

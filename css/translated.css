@@ -29,6 +29,23 @@ h3 {
   line-height: 39px;
   color: #000000; }
 
+.text--grande {
+  font-family: 'Almarai';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+  color: #000000; }
+
+@media screen and (max-width: 479px) {
+  h2 {
+    font-size: 30px; }
+  .text--grande {
+    font-size: 1.1em;
+    text-align: center;
+    padding-top: 0px;
+    margin-top: 0; } }
+
 header {
   width: 85%;
   height: 4em;
@@ -75,6 +92,38 @@ header {
     color: #F6E3D3; }
     header .menu__cta:hover {
       background-color: #e16141; }
+  header .menu__hambur {
+    display: none; }
+    header .menu__hambur .dropdown-menu.show {
+      padding: 1em;
+      background-color: #f5e7dc;
+      border-color: none; }
+      header .menu__hambur .dropdown-menu.show .menu__item {
+        font-family: "Almarai", sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        text-decoration: none;
+        color: #000000; }
+
+@media screen and (max-width: 479px) {
+  header {
+    width: 84%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: 10;
+    background-color: #F6E3D3;
+    top: 0px;
+    padding: 1.7em 2em 1.7em; }
+  .menu {
+    display: none; }
+    .menu .menu__cta {
+      display: none; }
+  .menu__hambur {
+    display: flex; } }
 
 .footer {
   margin-top: 4em;

@@ -133,10 +133,10 @@ header {
     margin-top: 1em; }
   .landing .landing__texto {
     grid-area: texto; }
-  .landing .landing__buttoms {
+  .landing .landing__buttons {
     grid-area: botones;
     display: inline-block; }
-    .landing .landing__buttoms .landing__cta {
+    .landing .landing__buttons .landing__cta {
       padding: 9px 25px;
       background-color: #F36A46;
       border: none;
@@ -146,9 +146,9 @@ header {
       margin-left: 1em;
       cursor: pointer;
       color: #F6E3D3; }
-      .landing .landing__buttoms .landing__cta .landing__cta:hover {
+      .landing .landing__buttons .landing__cta .landing__cta:hover {
         background-color: #e16141; }
-    .landing .landing__buttoms .landing__planes {
+    .landing .landing__buttons .landing__planes {
       padding: 9px 25px;
       background-color: transparent;
       box-sizing: border-box;
@@ -159,7 +159,7 @@ header {
       margin-left: 1em;
       cursor: pointer;
       color: #F36A46; }
-      .landing .landing__buttoms .landing__planes .landing__planes:hover {
+      .landing .landing__buttons .landing__planes .landing__planes:hover {
         border: 0.1em solid #e16141;
         color: #e16141; }
 

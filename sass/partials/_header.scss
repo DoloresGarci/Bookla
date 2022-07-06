@@ -21,36 +21,39 @@ header{
         display: inline-block;
         color: #000000;
         background-color: $fondo;
-        .menu__item{
-            font-family: "Almarai", sans-serif;
-            font-weight: 300;
-            font-size: 1em;
-            text-decoration: none;
-            color: #000000;
+        ul .menu__lista{
+            display: inline-flex;
+            .menu__item{
+                font-family: "Almarai", sans-serif;
+                font-weight: 300;
+                font-size: 1em;
+                text-decoration: none;
+                color: #000000;
+            }
+            .menu li{
+                display: inline-block;
+                padding: 0px 20px;
+                background-color: $fondo;
+            }
+            .menu li a {
+                transition: all 0.3s ease 0s;
+            }
         }
-        .menu li{
-            display: inline-block;
-            padding: 0px 20px;
-            background-color: $fondo;
-        }
-        .menu li a {
+        .menu__cta{
+            padding: 9px 25px;
+            background-color: #F36A46;
+            border: none;
+            border-radius: 0.7em;
+            font-weight: 400;
             transition: all 0.3s ease 0s;
+            cursor: pointer;
+            color: #F6E3D3;
+            .menu__cta:hover{
+                background-color: $naranja--oscuro;
+            }
         }
     }
-    .menu__cta{
-        padding: 9px 25px;
-        background-color: $naranja;
-        border: none;
-        border-radius: 0.7em;
-        font-weight: 400;
-        transition: all 0.3s ease 0s;
-        margin-left: 1em;
-        cursor: pointer;
-        color: $fondo;
-        &:hover{
-            background-color: #e16141;
-        }
-    }
+
     .menu__hambur{
         display: none;
         .dropdown-menu.show{
@@ -71,7 +74,7 @@ header{
     header{
         width: 84%;
         height: 2em;
-       display: flex;
+        display: flex;
         align-items: center;
         margin-bottom: 2em;
         justify-content:flex-end;
@@ -83,6 +86,9 @@ header{
     }
     .menu{
         display: none;
+        .menu__item{
+            display: none;
+        }
         .menu__cta{
             display: none;
         }

@@ -56,6 +56,10 @@ a{
     text-decoration: none;
     color: #000000;
 }
+a:hover{
+    text-decoration: none;
+    color: #000000;
+}
 .menu__item:hover{
     font-weight: 500;
 }
@@ -150,7 +154,7 @@ h3{
 .landing__texto{
     grid-area: texto;
 }
-.landing__buttoms{
+.landing__buttons{
     grid-area: botones;
     display: inline-block;
 }
@@ -237,10 +241,12 @@ ul .colecciones__informacion{
     padding-left: 7em;
     display: grid;
     grid-template-areas: 
+    ". img"
     "titulo img"
-    "texto img";
+    "texto img"
+    ". img";
     grid-template-columns: 42% 42%;
-    grid-template-rows:auto auto;
+    grid-template-rows:1fr auto auto 1fr;
     grid-column-gap: 3em;
 }
 .experiencia__photo{
@@ -250,7 +256,7 @@ ul .colecciones__informacion{
     grid-area: img;
 }
 .experiencia__titulo{
-    margin: auto 0px;
+    margin: auto 0px 2rem;
     padding-right: 3em;
     display: inline-block;
     grid-area: titulo;
@@ -444,7 +450,7 @@ ul .colecciones__informacion{
 
 /*---------ARTISTAS---------*/
 .artistas{  
-    margin-top: 3em;
+    margin-top: 5em;
     padding-left: 7em;
     padding-right: 6em;
     background-color: #F36A46;
@@ -481,7 +487,7 @@ ul .colecciones__informacion{
     display: inline;
 }
 
-.artistas__card1, .artistas__card2, .artistas__card3{
+.artistas__card1, .artistas__card2, .artistas__card3, .artistas__card4{
     display: inline-block;
     background-color: #F6E3D3;
     width: 24%;
@@ -595,6 +601,20 @@ ul .colecciones__informacion{
 .form{
     padding-left: 7em;
     padding-right: 7em;
+    grid-template-areas: 
+    ". listado"
+    "titulo listado"
+    "texto listado"
+    ". listado";
+    grid-template-columns: 42% 42%;
+    grid-template-rows:1fr auto auto 1fr;
+}
+
+.form__titulo{
+    grid-area: titulo;
+}
+.form__texto{
+    grid-area: texto;
 }
 .form__box{
     margin-top: 5em;
@@ -604,11 +624,12 @@ ul .colecciones__informacion{
     border-radius: 13px;
     box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
     padding: 1.5em;
+    grid-area: listado;
 }
 
 .form__text{
     width: 45%;
-    margin: auto 0px;
+    /*margin: auto 0px;*/
     padding-right: 3em;
     display: inline-block;
 }
@@ -629,6 +650,7 @@ ul .colecciones__informacion{
     display: inline-block;
     padding-left: 2em;
     bottom: 40%;
+    text-align: center;
 }
 .form__cta{     
     padding: 9px 25px;
@@ -790,6 +812,7 @@ ul .colecciones__informacion{
     align-items: center;
     padding-left: 7em;
     padding-right: 7em;
+
 }
 .regbox__photo{
     margin-top: 5em;
@@ -811,6 +834,7 @@ ul .colecciones__informacion{
     position: absolute;
     bottom: 2%;
 }
+
 .landing__cta{     
     padding: 9px 25px;
     cursor: pointer;
@@ -819,12 +843,32 @@ ul .colecciones__informacion{
 .regbox__form{
     display: inline-block;
 }
+
+.reggift{
+    align-items: center;
+    padding-left: 7em;
+    padding-right: 7em;
+    grid-template-areas: 
+    "titulo img"
+    "texto img"
+    "boton img";
+    grid-template-columns: 45% 45%;
+    grid-template-rows:1fr auto 1fr;
+    grid-column-gap: 3em;
+    margin-top: 5rem;
+}
 .reggift__form{
     display: inline-block;
     width: 45%;
 }
-.reggift__text{
-    margin: auto 0px;
+.reggift__photo{
+    grid-area: img;
+    width: 42%;
+}
+.reggift__titulo{
+    grid-area: titulo;
+}
+.reggift__texto{
     padding-right: 3em;
     display: inline-block;
 }
@@ -847,7 +891,7 @@ ul .colecciones__informacion{
 }
 
 
-@media screen and (max-width: 479px){
+@media screen and (max-width: 590px){
     h2{
         font-size: 30px;
     }
@@ -976,6 +1020,8 @@ ul .colecciones__informacion{
         row-gap: 2em;
         text-align: center;
     }
+
+    
     .funcion{
         margin: 5em 2em 3em;
         display: grid;

@@ -1,3 +1,7 @@
+*{
+    box-sizing: unset;
+}
+
 body{
     margin-left: 0%;
     margin-top: 1.25em;
@@ -7,6 +11,14 @@ li, button {
     font-family: "Almarai", sans-serif;
     font-weight: 300;
     font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+}
+ul{
+    margin-bottom: 0%;
+    margin-top: 0%;
+}
+a{
     text-decoration: none;
     color: #000000;
 }

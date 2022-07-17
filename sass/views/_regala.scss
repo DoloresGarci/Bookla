@@ -7,69 +7,85 @@
 
 .regbox{
     align-items: center;
-    padding-left: 7em;
-    padding-right: 7em;
+    width: 80%;
+    margin: 5rem auto 0px;
+    display: grid;
+    grid-template-areas:
+        "img ."
+        "img titulo"
+        "img texto"
+        "img boton"
+        "img .";
+    column-gap: 3rem;
     .regbox__photo{
-        margin-top: 5em;
-        width: 40%;
         display: inline-block;
+        grid-area: img;
     }
-    .regbox__form{
-        display: inline-block;
-        .regbox__text{
-            width: 45%;
-            margin: auto 0px;
-            padding-left: 3em;
-            display: inline-block;
-            position: absolute;
-            bottom: 10%;
-        }
-        .regbox__buttons{
-            display: inline-block;
-            padding-left: 2em;
-            position: absolute;
-            bottom: 2%;
-            .landing__cta{     
-                padding: 9px 25px;
-                cursor: pointer;
-            }
-        }
+    .regbox__titulo{
+        grid-area: titulo;
+        margin-bottom: 1rem;
     }
-    .reggift__form{
-        display: inline-block;
-        width: 45%;
-        .reggift__text{
-            margin: auto 0px;
-            padding-right: 3em;
-            display: inline-block;
-        }
-        .reggift__buttons{
-            display: inline-block;
-            .reggift__cta{
-                padding: 9px 25px;
-                background-color: #F36A46;
-                border: none;
-                border-radius: 0.7em;
-                font-weight: 400;
-                transition: all 0.3s ease 0s;
-                cursor: pointer;
-                color: #F6E3D3;
-            }
-        }
+    .regbox__texto{
+        grid-area: texto;
+        margin-bottom: 2rem;
     }
-    .regbox__photo{
-        margin-top: 5em;
-        width: 40%;
-        display: inline-block;
+    .regbox__buttons{
+    grid-area: boton;
+        .landing__cta{
+            padding: 9px 25px;
+            background-color: #F36A46;
+            border: none;
+            border-radius: 0.7em;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            color: #F6E3D3;
+        }
     }
 }
 
-
-
-
-
-
-
-.reggift__cta:hover{
-    background-color: #e16141;
+.reggift{
+    align-items: center;
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+        ". img"
+        "titulo img"
+        "texto img"
+        "boton img"
+        ".img";
+    grid-column-gap: 3em;
+    margin-top: 5rem;
+    margin: 5rem auto 0px;
+    .reggift__titulo{
+        grid-area: titulo;
+        margin-bottom: 1rem;
+    }
+    .reggift__texto{
+        display: inline-block;
+        grid-area: texto;
+        margin-bottom: 2rem;
+    }
+    .reggift__buttons{
+        display: inline-block;
+        grid-area: boton;
+        .reggift__cta{
+            padding: 9px 25px;
+            background-color: #F36A46;
+            border: none;
+            border-radius: 0.7em;
+            font-weight: 400;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            color: #F6E3D3;
+            .reggift__cta:hover{
+                background-color: #e16141;
+            }
+            
+        }
+    }
+    .reggift__photo{
+        grid-area: img;
+        height: 70%;
+    }
 }

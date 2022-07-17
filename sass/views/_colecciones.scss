@@ -6,21 +6,26 @@
 }
 .puntos{
     align-items: center;
-    padding-left: 7em;
-    padding-right: 7em;
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+        "img ."
+        "img lista"
+        "img .";
+    margin: 5rem auto 0;
+    column-gap: 3rem;
     .puntos__photo{
-        margin-top: 5em;
-        width: 40%;
         display: inline-block;
+        grid-area: img;
+        height: 90%;
     }
     .puntos__importantes{
-        display: inline-block;
+        grid-area: lista;
         .puntos__lista{
             margin: auto 0px;
-            padding-left: 3em;
             display: inline-block;
-            position: absolute;
-            bottom: 4%;
+            grid-area: lista;
+            list-style-image: url(../img/ICONO--GRANDE.png);
             .puntos__lista2{
                 margin: 0 0 1.7em ;
                 .puntos__item{
@@ -38,24 +43,36 @@
 
 
 .form{
-    padding-left: 7em;
-    padding-right: 7em;
-    .form__text{
-        width: 45%;
-        margin: auto 0px;
-        padding-right: 3em;
-        display: inline-block;
+    margin: 5rem auto 0px;
+    align-content: center;
+    width: 84%;
+    display: grid;
+    grid-template-areas: 
+    ". listado"
+    "titulo listado"
+    "texto listado"
+    ". listado";
+    grid-template-columns: 42% 42%;
+    grid-template-rows:1fr auto auto 1fr;
+    column-gap: 5rem;
+    justify-content: space-around;
+    .form__titulo{
+        grid-area: titulo;
+        margin-bottom: 1.5rem;
+    }
+    .form__texto{
+        grid-area: texto;
     }
     .form__box{
-        margin-top: 5em;
-        width: 40%;
         display: inline-block;
         background-color: #f5e7dc;
         border-radius: 13px;
         box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
         padding: 1.5em;
+        grid-area: listado;
         .form__list{
             padding-bottom: 1em;
+            list-style-image: url('../img/ICONO--MEDIO.png');
             .form__list2{
                 margin: 0 0 1.7em ;
                 .form__item{
@@ -68,12 +85,17 @@
             }
         }
         .form__buttons{
-            display: inline-block;
-            padding-left: 2em;
             bottom: 40%;
+            text-align: center;
             .form__cta{     
                 padding: 9px 25px;
+                background-color: $naranja;
+                border: none;
+                border-radius: 0.7em;
+                font-weight: 400;
+                transition: all 0.3s ease 0s;
                 cursor: pointer;
+                color: $fondo;
             }
         }
     }

@@ -602,20 +602,22 @@ header {
 
 .puntos {
   align-items: center;
-  padding-left: 7em;
-  padding-right: 7em; }
+  width: 80%;
+  display: grid;
+  grid-template-areas: "img ." "img lista" "img .";
+  margin: 5rem auto 0;
+  column-gap: 3rem; }
   .puntos .puntos__photo {
-    margin-top: 5em;
-    width: 40%;
-    display: inline-block; }
+    display: inline-block;
+    grid-area: img;
+    height: 90%; }
   .puntos .puntos__importantes {
-    display: inline-block; }
+    grid-area: lista; }
     .puntos .puntos__importantes .puntos__lista {
       margin: auto 0px;
-      padding-left: 3em;
       display: inline-block;
-      position: absolute;
-      bottom: 4%; }
+      grid-area: lista;
+      list-style-image: url(../img/ICONO--GRANDE.png); }
       .puntos .puntos__importantes .puntos__lista .puntos__lista2 {
         margin: 0 0 1.7em; }
         .puntos .puntos__importantes .puntos__lista .puntos__lista2 .puntos__item {
@@ -627,23 +629,30 @@ header {
           padding-bottom: 1em; }
 
 .form {
-  padding-left: 7em;
-  padding-right: 7em; }
-  .form .form__text {
-    width: 45%;
-    margin: auto 0px;
-    padding-right: 3em;
-    display: inline-block; }
+  margin: 5rem auto 0px;
+  align-content: center;
+  width: 84%;
+  display: grid;
+  grid-template-areas: ". listado" "titulo listado" "texto listado" ". listado";
+  grid-template-columns: 42% 42%;
+  grid-template-rows: 1fr auto auto 1fr;
+  column-gap: 5rem;
+  justify-content: space-around; }
+  .form .form__titulo {
+    grid-area: titulo;
+    margin-bottom: 1.5rem; }
+  .form .form__texto {
+    grid-area: texto; }
   .form .form__box {
-    margin-top: 5em;
-    width: 40%;
     display: inline-block;
     background-color: #f5e7dc;
     border-radius: 13px;
     box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
-    padding: 1.5em; }
+    padding: 1.5em;
+    grid-area: listado; }
     .form .form__box .form__list {
-      padding-bottom: 1em; }
+      padding-bottom: 1em;
+      list-style-image: url("../img/ICONO--MEDIO.png"); }
       .form .form__box .form__list .form__list2 {
         margin: 0 0 1.7em; }
         .form .form__box .form__list .form__list2 .form__item {
@@ -653,12 +662,17 @@ header {
           font-size: 1.2;
           color: #000000; }
     .form .form__box .form__buttons {
-      display: inline-block;
-      padding-left: 2em;
-      bottom: 40%; }
+      bottom: 40%;
+      text-align: center; }
       .form .form__box .form__buttons .form__cta {
         padding: 9px 25px;
-        cursor: pointer; }
+        background-color: #F36A46;
+        border: none;
+        border-radius: 0.7em;
+        font-weight: 400;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: #F6E3D3; }
 
 .plan {
   padding-left: 7em;
@@ -733,65 +747,27 @@ header {
 
 .boxficcion {
   align-items: center;
-  padding-left: 7em;
-  padding-right: 7em; }
+  width: 80%;
+  margin: 2rem auto 0px;
+  display: grid;
+  grid-template-areas: "img ." "img mes" "img titulo" "img texto" "img .";
+  column-gap: 3rem; }
   .boxficcion .boxficcion__photo {
-    margin-top: 5em;
-    width: 40%;
-    display: inline-block; }
-  .boxficcion .boxficcion__text {
-    width: 45%;
-    margin: auto 0px;
-    padding-left: 3em;
     display: inline-block;
-    position: absolute;
-    bottom: 35%; }
-    .boxficcion .boxficcion__text .boxficcion__mes {
-      color: #F36A46;
-      text-decoration: overline solid #F36A46 3px;
-      font-family: 'Elephant';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.4em;
-      margin: 1.5em 0 1em; }
-
-.boxficcion2 {
-  align-items: center;
-  padding-left: 7em;
-  padding-right: 7em; }
-  .boxficcion2 .boxficcion2__text {
-    width: 45%;
-    margin: auto 0px;
-    padding-right: 3em;
-    display: inline-block;
-    position: relative;
-    bottom: 30%; }
-    .boxficcion2 .boxficcion2__text .boxficcion__mes {
-      color: #F36A46;
-      text-decoration: overline solid #F36A46 3px;
-      font-family: 'Elephant';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.4em;
-      margin: 1.5em 0 1em; }
-
-.boxficcion3 {
-  align-items: center;
-  padding-left: 7em;
-  padding-right: 7em; }
-  .boxficcion3 .boxficcion3__text {
-    width: 45%;
-    margin: auto 0px;
-    padding-left: 3em;
-    display: inline-block; }
-    .boxficcion3 .boxficcion3__text .boxficcion__mes {
-      color: #F36A46;
-      text-decoration: overline solid #F36A46 3px;
-      font-family: 'Elephant';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.4em;
-      margin: 1.5em 0 1em; }
+    grid-area: img;
+    height: 90%; }
+  .boxficcion .boxficcion__mes {
+    color: #F36A46;
+    text-decoration: overline solid #F36A46 3px;
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    grid-area: mes; }
+  .boxficcion .boxficcion__titulo {
+    grid-area: titulo; }
+  .boxficcion .boxficcion__texto {
+    grid-area: texto; }
 
 .suscripcion {
   padding-left: 7em;
@@ -828,6 +804,54 @@ header {
       background-color: #F6E3D3;
       color: #F36A46; }
 
+.boxficcion2 {
+  align-items: center;
+  width: 80%;
+  margin: 2rem auto 0px;
+  display: grid;
+  grid-template-areas: ". img" "mes img" "titulo img" "texto img" ". img";
+  column-gap: 3rem; }
+  .boxficcion2 .boxficcion__photo {
+    display: inline-block;
+    grid-area: img;
+    height: 90%; }
+  .boxficcion2 .boxficcion__mes {
+    color: #F36A46;
+    text-decoration: overline solid #F36A46 3px;
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    grid-area: mes; }
+  .boxficcion2 .boxficcion__titulo {
+    grid-area: titulo; }
+  .boxficcion2 .boxficcion__texto {
+    grid-area: texto; }
+
+.boxficcion3 {
+  align-items: center;
+  width: 80%;
+  margin: 2rem auto 0px;
+  display: grid;
+  grid-template-areas: "img ." "img mes" "img titulo" "img texto" "img .";
+  column-gap: 3rem; }
+  .boxficcion3 .boxficcion__photo {
+    display: inline-block;
+    grid-area: img;
+    height: 90%; }
+  .boxficcion3 .boxficcion__mes {
+    color: #F36A46;
+    text-decoration: overline solid #F36A46 3px;
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    grid-area: mes; }
+  .boxficcion3 .boxficcion__titulo {
+    grid-area: titulo; }
+  .boxficcion3 .boxficcion__texto {
+    grid-area: texto; }
+
 .intror {
   padding-left: 7em;
   margin-top: 9em;
@@ -836,51 +860,61 @@ header {
 
 .regbox {
   align-items: center;
-  padding-left: 7em;
-  padding-right: 7em; }
+  width: 80%;
+  margin: 5rem auto 0px;
+  display: grid;
+  grid-template-areas: "img ." "img titulo" "img texto" "img boton" "img .";
+  column-gap: 3rem; }
   .regbox .regbox__photo {
-    margin-top: 5em;
-    width: 40%;
-    display: inline-block; }
-  .regbox .regbox__form {
-    display: inline-block; }
-    .regbox .regbox__form .regbox__text {
-      width: 45%;
-      margin: auto 0px;
-      padding-left: 3em;
-      display: inline-block;
-      position: absolute;
-      bottom: 10%; }
-    .regbox .regbox__form .regbox__buttons {
-      display: inline-block;
-      padding-left: 2em;
-      position: absolute;
-      bottom: 2%; }
-      .regbox .regbox__form .regbox__buttons .landing__cta {
-        padding: 9px 25px;
-        cursor: pointer; }
-  .regbox .reggift__form {
     display: inline-block;
-    width: 45%; }
-    .regbox .reggift__form .reggift__text {
-      margin: auto 0px;
-      padding-right: 3em;
-      display: inline-block; }
-    .regbox .reggift__form .reggift__buttons {
-      display: inline-block; }
-      .regbox .reggift__form .reggift__buttons .reggift__cta {
-        padding: 9px 25px;
-        background-color: #F36A46;
-        border: none;
-        border-radius: 0.7em;
-        font-weight: 400;
-        transition: all 0.3s ease 0s;
-        cursor: pointer;
-        color: #F6E3D3; }
-  .regbox .regbox__photo {
-    margin-top: 5em;
-    width: 40%;
-    display: inline-block; }
+    grid-area: img; }
+  .regbox .regbox__titulo {
+    grid-area: titulo;
+    margin-bottom: 1rem; }
+  .regbox .regbox__texto {
+    grid-area: texto;
+    margin-bottom: 2rem; }
+  .regbox .regbox__buttons {
+    grid-area: boton; }
+    .regbox .regbox__buttons .landing__cta {
+      padding: 9px 25px;
+      background-color: #F36A46;
+      border: none;
+      border-radius: 0.7em;
+      font-weight: 400;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      color: #F6E3D3; }
 
-.reggift__cta:hover {
-  background-color: #e16141; }
+.reggift {
+  align-items: center;
+  width: 80%;
+  display: grid;
+  grid-template-areas: ". img" "titulo img" "texto img" "boton img" ".img";
+  grid-column-gap: 3em;
+  margin-top: 5rem;
+  margin: 5rem auto 0px; }
+  .reggift .reggift__titulo {
+    grid-area: titulo;
+    margin-bottom: 1rem; }
+  .reggift .reggift__texto {
+    display: inline-block;
+    grid-area: texto;
+    margin-bottom: 2rem; }
+  .reggift .reggift__buttons {
+    display: inline-block;
+    grid-area: boton; }
+    .reggift .reggift__buttons .reggift__cta {
+      padding: 9px 25px;
+      background-color: #F36A46;
+      border: none;
+      border-radius: 0.7em;
+      font-weight: 400;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      color: #F6E3D3; }
+      .reggift .reggift__buttons .reggift__cta .reggift__cta:hover {
+        background-color: #e16141; }
+  .reggift .reggift__photo {
+    grid-area: img;
+    height: 70%; }

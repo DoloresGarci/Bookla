@@ -1,4 +1,4 @@
-window.addEventListener('load', function(){
+window.addEventListener('load' , function(){
     new Glider(document.querySelector('.artistas__cards'), {
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -7,5 +7,5 @@ window.addEventListener('load', function(){
           prev: '.prev',
           next: '.next'
         }
-      });
+      })
   })

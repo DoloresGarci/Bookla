@@ -3,13 +3,17 @@
     margin-top: 8em;
     display: grid;
     grid-template-areas: 
+    "img ."
     "img titulo"
-    "img texto";
+    "img texto"
+    "img .";
     grid-template-columns: 42% 42%;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 5rem 1fr 1fr 1fr;
     grid-column-gap: 3em;
     .funcion__photo{
-        width: 100%;
+        width: auto;
+        height: 30rem;
+        padding-left: 15%;
         grid-area: img;
     }
     .funcion__titulo{
@@ -21,25 +25,36 @@
     }
 }
 .experiencia{
-    padding-left: 7em;
+    width: 80%;
+    align-content: center;
+    margin: 5rem auto 0px;
     display: grid;
-    grid-template-areas: 
-    "texto img";
-    grid-template-columns: 42% 42%;
-    grid-template-rows: auto;
-    grid-column-gap: 3em;
-    .experiencia__text{
+    grid-template-areas:
+        ". img"
+        "titulo img"
+        "texto img"
+        ". img";
+    grid-template-columns: 47% 47%;
+    grid-template-rows: 1fr auto auto 1fr;
+    grid-column-gap: 2em;
+    justify-content: space-between;
+    .experiencia__photo{
+        width: 100%;
+        display: inline-block;
+        grid-area: img;
+    }
+    .experiencia__titulo{
+        margin: auto 0px 2rem;
+        padding-right: 3em;
+        display: inline-block;
+        grid-area: titulo;
+    }
+    .experiencia__texto{
         margin: auto 0px;
         padding-right: 3em;
         display: inline-block;
         grid-area: texto;
     }
-    .experiencia__photo{
-        margin-top: 5em;
-        width: 100%;
-        display: inline-block;
-        grid-area: img;
-    } 
 }
 .regalos{
     align-items: center;
@@ -61,7 +76,6 @@
         grid-area: img;
     }
     .regalos__titulo{
-    
         grid-area: titulo;
     }
     .regalos__text{
@@ -72,10 +86,10 @@
     }
 }
 .artistas{  
-    margin-top: 3em;
+    margin-top: 5em;
     padding-left: 7em;
-    padding-right: 7em;
-    background-color: #F36A46;
+    padding-right: 6em;
+    background-color: $naranja;
     padding-top: 3rem;
     padding-bottom: 3rem;
     .artistas__titulo{
@@ -93,16 +107,53 @@
         margin: 0 auto 2em;
         text-align: center;
     }
-    .artistas__arrow{
-        display: inline-block;
-        .artistas__button{
+    .artistas__contenedor{
+        .artistas__button .prev{
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+        }
+        .artistas__cards{
+            display: inline;
+            .artistas__card{
+                display: inline-block;
+                background-color: #F6E3D3;
+                width: 24%;
+                padding: 1.5em;
+                margin: 1em;
+                border-radius: 13px;
+                .artistas__img{
+                    width: 100%;
+                    margin-bottom: 1em;
+                }
+                .artistas__card--titulo{
+                    font-family: 'Elephant';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.5em;
+                    line-height: 29px;
+                    color: #000000;
+                }
+                .artistas__card--text{
+                    margin-top: 0.5em;
+                    display: block;
+                    font-family: 'Almarai';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 1em;
+                    color: #000000;
+                }
+            }
+        }
+        .artistas__button .next{
             text-decoration: none;
             background-color: transparent;
             border: none;
             display: inline-block;
         }
     }  
-    .artistas__cards{
+    /*.artistas__cards{
         display: inline;
         .artistas__card1, .artistas__card2, .artistas__card3{
             display: inline-block;
@@ -133,7 +184,7 @@
                 color: #000000;
             }
         } 
-    }
+    }*/
 }
 
 

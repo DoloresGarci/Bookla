@@ -21,38 +21,39 @@ header{
         display: inline-block;
         color: #000000;
         background-color: $fondo;
-        ul .menu__lista{
+        .menu__lista{
             display: inline-flex;
-            .menu__item{
-                font-family: "Almarai", sans-serif;
-                font-weight: 300;
-                font-size: 1em;
-                text-decoration: none;
-                color: #000000;
-            }
-            .menu li{
+            li{
                 display: inline-block;
                 padding: 0px 20px;
                 background-color: $fondo;
-            }
-            .menu li a {
-                transition: all 0.3s ease 0s;
-            }
-        }
-        .menu__cta{
-            padding: 9px 25px;
-            background-color: #F36A46;
-            border: none;
-            border-radius: 0.7em;
-            font-weight: 400;
-            transition: all 0.3s ease 0s;
-            cursor: pointer;
-            color: #F6E3D3;
-            .menu__cta:hover{
-                background-color: $naranja--oscuro;
+                a {
+                    transition: all 0.3s ease 0s;
+                }
+                .menu__item{
+                    font-family: "Almarai", sans-serif;
+                    font-weight: 300;
+                    font-size: 1em;
+                    text-decoration: none;
+                    color: #000000;
+                }
             }
         }
     }
+    .menu__cta{
+        padding: 9px 25px;
+        background-color: #F36A46;
+        border: none;
+        border-radius: 0.7em;
+        font-weight: 400;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: #F6E3D3;
+        .menu__cta:hover{
+            background-color: $naranja--oscuro;
+        }
+    }
+
 
     .menu__hambur{
         display: none;
@@ -89,10 +90,10 @@ header{
         .menu__item{
             display: none;
         }
-        .menu__cta{
-            display: none;
-        }
     } 
+    .menu__cta{
+        display: none;
+    }
     .menu__hambur{
         display: flex;
     }

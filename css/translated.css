@@ -3,6 +3,9 @@
   font-family: Elephant;
   src: url(../font/ELEPHNT.TTF); }
 
+* {
+  box-sizing: unset; }
+
 body {
   margin-left: 0%;
   margin-top: 1.25em;
@@ -12,6 +15,14 @@ li, button {
   font-family: "Almarai", sans-serif;
   font-weight: 300;
   font-size: 1em;
+  text-decoration: none;
+  color: #000000; }
+
+ul {
+  margin-bottom: 0%;
+  margin-top: 0%; }
+
+a {
   text-decoration: none;
   color: #000000; }
 
@@ -68,18 +79,20 @@ header {
     display: inline-block;
     color: #000000;
     background-color: #F6E3D3; }
-    header .menu .menu__item {
-      font-family: "Almarai", sans-serif;
-      font-weight: 300;
-      font-size: 1em;
-      text-decoration: none;
-      color: #000000; }
-    header .menu .menu li {
-      display: inline-block;
-      padding: 0px 20px;
-      background-color: #F6E3D3; }
-    header .menu .menu li a {
-      transition: all 0.3s ease 0s; }
+    header .menu .menu__lista {
+      display: inline-flex; }
+      header .menu .menu__lista li {
+        display: inline-block;
+        padding: 0px 20px;
+        background-color: #F6E3D3; }
+        header .menu .menu__lista li a {
+          transition: all 0.3s ease 0s; }
+        header .menu .menu__lista li .menu__item {
+          font-family: "Almarai", sans-serif;
+          font-weight: 300;
+          font-size: 1em;
+          text-decoration: none;
+          color: #000000; }
   header .menu__cta {
     padding: 9px 25px;
     background-color: #F36A46;
@@ -87,10 +100,9 @@ header {
     border-radius: 0.7em;
     font-weight: 400;
     transition: all 0.3s ease 0s;
-    margin-left: 1em;
     cursor: pointer;
     color: #F6E3D3; }
-    header .menu__cta:hover {
+    header .menu__cta .menu__cta:hover {
       background-color: #e16141; }
   header .menu__hambur {
     display: none; }
@@ -120,8 +132,10 @@ header {
     padding: 1.7em 2em 1.7em; }
   .menu {
     display: none; }
-    .menu .menu__cta {
+    .menu .menu__item {
       display: none; }
+  .menu__cta {
+    display: none; }
   .menu__hambur {
     display: flex; } }
 
@@ -177,7 +191,7 @@ header {
   .landing .landing__photo {
     width: 100%;
     grid-area: img; }
-  .landing .landing__titulo {
+  .landing .landing__title {
     grid-area: titulo;
     margin-top: 1em; }
   .landing .landing__texto {
@@ -185,20 +199,19 @@ header {
   .landing .landing__buttons {
     grid-area: botones;
     display: inline-block; }
-    .landing .landing__buttons .landing__cta {
-      padding: 9px 25px;
+    .landing .landing__buttons .boton--principal {
+      padding: 16px 40px;
       background-color: #F36A46;
       border: none;
       border-radius: 0.7em;
       font-weight: 400;
       transition: all 0.3s ease 0s;
-      margin-left: 1em;
       cursor: pointer;
       color: #F6E3D3; }
-      .landing .landing__buttons .landing__cta .landing__cta:hover {
+      .landing .landing__buttons .boton--principal .boton--principal:hove {
         background-color: #e16141; }
     .landing .landing__buttons .landing__planes {
-      padding: 9px 25px;
+      padding: 16px 40px;
       background-color: transparent;
       box-sizing: border-box;
       border: 0.1em solid #F36A46;
@@ -207,6 +220,7 @@ header {
       transition: all 0.3s ease 0s;
       margin-left: 1em;
       cursor: pointer;
+      margin-left: 1em;
       color: #F36A46; }
       .landing .landing__buttons .landing__planes .landing__planes:hover {
         border: 0.1em solid #e16141;
@@ -215,38 +229,75 @@ header {
 .colecciones {
   margin-top: 2em;
   padding: 3em 7em; }
-  .colecciones .colecciones__1, .colecciones .colecciones__2, .colecciones .colecciones__3 {
-    display: inline-block;
-    background-color: #f5e7dc;
-    width: 24%;
-    padding: 2.5em;
-    margin: 1em;
-    box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
-    border-radius: 13px;
-    height: 20em; }
-    .colecciones .colecciones__1 .colecciones__card--titulo, .colecciones .colecciones__2 .colecciones__card--titulo, .colecciones .colecciones__3 .colecciones__card--titulo {
-      font-family: 'Elephant';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 1.5em;
-      line-height: 29px;
-      color: #000000;
-      text-decoration: none; }
+  .colecciones h3 {
+    text-align: center; }
+  .colecciones .colecciones__cards {
+    column-gap: 1.5em; }
+    .colecciones .colecciones__cards .colecciones__1, .colecciones .colecciones__cards .colecciones__2, .colecciones .colecciones__cards .colecciones__3 {
+      display: inline-block;
+      background-color: #f5e7dc;
+      width: 22%;
+      padding: 2.5em;
+      margin: 1em;
+      box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+      border-radius: 13px;
+      height: 20em; }
+      .colecciones .colecciones__cards .colecciones__1 a .colecciones__card--titulo, .colecciones .colecciones__cards .colecciones__2 a .colecciones__card--titulo, .colecciones .colecciones__cards .colecciones__3 a .colecciones__card--titulo {
+        text-align: center;
+        color: #000000;
+        text-decoration: none;
+        font-family: 'Elephant';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5em;
+        line-height: 29px;
+        margin-bottom: 1rem; }
+        .colecciones .colecciones__cards .colecciones__1 a .colecciones__card--titulo .colecciones__card--titulo:hover, .colecciones .colecciones__cards .colecciones__2 a .colecciones__card--titulo .colecciones__card--titulo:hover, .colecciones .colecciones__cards .colecciones__3 a .colecciones__card--titulo .colecciones__card--titulo:hover {
+          text-decoration: none;
+          color: #000000; }
+      .colecciones .colecciones__cards .colecciones__1 a a:hover, .colecciones .colecciones__cards .colecciones__2 a a:hover, .colecciones .colecciones__cards .colecciones__3 a a:hover {
+        text-decoration: none;
+        color: #000000; }
+      .colecciones .colecciones__cards .colecciones__1 ul, .colecciones .colecciones__cards .colecciones__2 ul, .colecciones .colecciones__cards .colecciones__3 ul {
+        padding-top: 1rem;
+        margin-top: 1rem;
+        text-decoration: none;
+        color: #000000; }
+        .colecciones .colecciones__cards .colecciones__1 ul .colecciones__texto, .colecciones .colecciones__cards .colecciones__2 ul .colecciones__texto, .colecciones .colecciones__cards .colecciones__3 ul .colecciones__texto {
+          font-size: 1em;
+          padding: 1.5rem 0px 0px; }
+      .colecciones .colecciones__cards .colecciones__1 .colecciones__cta, .colecciones .colecciones__cards .colecciones__2 .colecciones__cta, .colecciones .colecciones__cards .colecciones__3 .colecciones__cta {
+        margin-top: 2rem;
+        margin-left: 25%;
+        padding: 9px 25px;
+        background-color: transparent;
+        border: 2px solid #F36A46;
+        border-radius: 0.7em;
+        font-weight: 400;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        color: #F36A46; }
+        .colecciones .colecciones__cards .colecciones__1 .colecciones__cta .colecciones__cta:hover, .colecciones .colecciones__cards .colecciones__2 .colecciones__cta .colecciones__cta:hover, .colecciones .colecciones__cards .colecciones__3 .colecciones__cta .colecciones__cta:hover {
+          border: 2px solid #e16141;
+          color: #e16141; }
 
 .experiencia {
-  padding-left: 7em;
+  align-items: center;
+  width: 80%;
   display: grid;
-  grid-template-areas: "texto img";
-  grid-template-columns: 42% 42%;
-  grid-template-rows: auto;
+  grid-template-areas: ". img" "titulo img" "texto img" ". img";
+  grid-template-rows: 7rem auto auto auto;
   grid-column-gap: 3em; }
-  .experiencia .experiencia__text {
+  .experiencia h2 .experiencia__titulo {
+    margin: 0px 0px 4rem;
+    grid-area: titulo;
+    display: inline-block; }
+  .experiencia .experiencia__texto {
     margin: auto 0px;
     padding-right: 3em;
     display: inline-block;
     grid-area: texto; }
   .experiencia .experiencia__photo {
-    margin-top: 5em;
     width: 100%;
     display: inline-block;
     grid-area: img; }
@@ -262,7 +313,8 @@ header {
   text-align: center; }
   .plan .plan__titulo {
     color: #F6E3D3;
-    font-size: 34px; }
+    font-size: 34px;
+    margin-bottom: 1em; }
   .plan .plan__text {
     width: 70%;
     font-family: 'Almarai';
@@ -296,10 +348,10 @@ header {
   grid-template-columns: 42% 42%;
   grid-template-rows: 1fr 1fr 1fr;
   grid-column-gap: 3em; }
-  .regala .regala__photo {
-    width: 100%;
-    display: inline-block;
-    grid-area: img; }
+  .regala .regala__titulo {
+    grid-area: titulo;
+    margin: auto 0px;
+    display: inline-block; }
   .regala .regala__texto {
     grid-area: texto;
     margin: auto 0px;
@@ -316,17 +368,88 @@ header {
     grid-area: botones;
     margin: auto 0px;
     display: inline-block; }
+  .regala .regala__photo {
+    width: 100%;
+    display: inline-block;
+    grid-area: img; }
+    .regala .regala__photo .regala__cta:hover {
+      background-color: #e16141; }
+
+@media screen and (max-width: 479px) {
+  .landing {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 5em;
+    display: grid;
+    grid-template-areas: "titulo" "texto" "botones" "img";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 2em;
+    row-gap: 1em; }
+    .landing .landing__title {
+      margin-bottom: 0;
+      text-align: center; }
+    .landing .landing__buttons {
+      margin: 0 auto;
+      text-align: center; }
+  .colecciones {
+    margin: 2em auto 0px;
+    /*width: 84%;*/ }
+    .colecciones .colecciones__1, .colecciones .colecciones__2, .colecciones .colecciones__3 {
+      /*display: inline-block;*/
+      background-color: #f5e7dc;
+      box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+      border-radius: 13px;
+      height: 15em; }
+      .colecciones .colecciones__1 .colecciones__card--titulo, .colecciones .colecciones__2 .colecciones__card--titulo, .colecciones .colecciones__3 .colecciones__card--titulo {
+        font-family: 'Elephant';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.3em;
+        color: #000000;
+        text-decoration: none; }
+  .experiencia {
+    padding-left: 2em;
+    display: grid;
+    grid-template-areas: "titulo" "texto" "img";
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 2em; }
+    .experiencia .experiencia__photo {
+      width: 100%;
+      box-sizing: border-box; }
+    .experiencia .experiencia__titulo {
+      text-align: center; }
+    .experiencia .experiencia__text {
+      margin: auto 0px;
+      width: auto; }
+  .plan {
+    padding: 2em 2em; }
+    .plan .plan__text {
+      width: 100%; }
+    .plan .plan__titulo {
+      font-size: 30px; }
+  .regala {
+    margin: 3em 2em;
+    display: grid;
+    grid-template-areas: "titulo" "texto" "botones" "img";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 2em;
+    text-align: center; } }
 
 .funcion {
   margin-left: 7em;
   margin-top: 8em;
   display: grid;
-  grid-template-areas: "img titulo" "img texto";
+  grid-template-areas: "img ." "img titulo" "img texto" "img .";
   grid-template-columns: 42% 42%;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 5rem 1fr 1fr 1fr;
   grid-column-gap: 3em; }
   .funcion .funcion__photo {
-    width: 100%;
+    width: auto;
+    height: 30rem;
+    padding-left: 15%;
     grid-area: img; }
   .funcion .funcion__titulo {
     grid-area: titulo;
@@ -335,22 +458,29 @@ header {
     grid-area: texto; }
 
 .experiencia {
-  padding-left: 7em;
+  width: 80%;
+  align-content: center;
+  margin: 5rem auto 0px;
   display: grid;
-  grid-template-areas: "texto img";
-  grid-template-columns: 42% 42%;
-  grid-template-rows: auto;
-  grid-column-gap: 3em; }
-  .experiencia .experiencia__text {
+  grid-template-areas: ". img" "titulo img" "texto img" ". img";
+  grid-template-columns: 47% 47%;
+  grid-template-rows: 1fr auto auto 1fr;
+  grid-column-gap: 2em;
+  justify-content: space-between; }
+  .experiencia .experiencia__photo {
+    width: 100%;
+    display: inline-block;
+    grid-area: img; }
+  .experiencia .experiencia__titulo {
+    margin: auto 0px 2rem;
+    padding-right: 3em;
+    display: inline-block;
+    grid-area: titulo; }
+  .experiencia .experiencia__texto {
     margin: auto 0px;
     padding-right: 3em;
     display: inline-block;
     grid-area: texto; }
-  .experiencia .experiencia__photo {
-    margin-top: 5em;
-    width: 100%;
-    display: inline-block;
-    grid-area: img; }
 
 .regalos {
   align-items: center;
@@ -375,12 +505,44 @@ header {
     grid-area: texto; }
 
 .artistas {
-  margin-top: 3em;
+  margin-top: 5em;
   padding-left: 7em;
-  padding-right: 7em;
+  padding-right: 6em;
   background-color: #F36A46;
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 3rem;
+  /*.artistas__cards{
+        display: inline;
+        .artistas__card1, .artistas__card2, .artistas__card3{
+            display: inline-block;
+            background-color: #F6E3D3;
+            width: 24%;
+            padding: 1.5em;
+            margin: 1em;
+            border-radius: 13px;
+            .artistas__img{
+                width: 100%;
+                margin-bottom: 1em;
+            }
+            .artistas__card--titulo{
+                font-family: 'Elephant';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 1.5em;
+                line-height: 29px;
+                color: #000000;
+            }
+            .artistas__card--text{
+                margin-top: 0.5em;
+                display: block;
+                font-family: 'Almarai';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1em;
+                color: #000000;
+            }
+        } 
+    }*/ }
   .artistas .artistas__titulo {
     color: #F6E3D3;
     font-size: 34px;
@@ -394,33 +556,31 @@ header {
     color: #F6E3D3;
     margin: 0 auto 2em;
     text-align: center; }
-  .artistas .artistas__arrow {
+  .artistas .artistas__contenedor .artistas__button .prev {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
     display: inline-block; }
-    .artistas .artistas__arrow .artistas__button {
-      text-decoration: none;
-      background-color: transparent;
-      border: none;
-      display: inline-block; }
-  .artistas .artistas__cards {
+  .artistas .artistas__contenedor .artistas__cards {
     display: inline; }
-    .artistas .artistas__cards .artistas__card1, .artistas .artistas__cards .artistas__card2, .artistas .artistas__cards .artistas__card3 {
+    .artistas .artistas__contenedor .artistas__cards .artistas__card {
       display: inline-block;
       background-color: #F6E3D3;
       width: 24%;
       padding: 1.5em;
       margin: 1em;
       border-radius: 13px; }
-      .artistas .artistas__cards .artistas__card1 .artistas__img, .artistas .artistas__cards .artistas__card2 .artistas__img, .artistas .artistas__cards .artistas__card3 .artistas__img {
+      .artistas .artistas__contenedor .artistas__cards .artistas__card .artistas__img {
         width: 100%;
         margin-bottom: 1em; }
-      .artistas .artistas__cards .artistas__card1 .artistas__card--titulo, .artistas .artistas__cards .artistas__card2 .artistas__card--titulo, .artistas .artistas__cards .artistas__card3 .artistas__card--titulo {
+      .artistas .artistas__contenedor .artistas__cards .artistas__card .artistas__card--titulo {
         font-family: 'Elephant';
         font-style: normal;
         font-weight: 400;
         font-size: 1.5em;
         line-height: 29px;
         color: #000000; }
-      .artistas .artistas__cards .artistas__card1 .artistas__card--text, .artistas .artistas__cards .artistas__card2 .artistas__card--text, .artistas .artistas__cards .artistas__card3 .artistas__card--text {
+      .artistas .artistas__contenedor .artistas__cards .artistas__card .artistas__card--text {
         margin-top: 0.5em;
         display: block;
         font-family: 'Almarai';
@@ -428,6 +588,11 @@ header {
         font-weight: 300;
         font-size: 1em;
         color: #000000; }
+  .artistas .artistas__contenedor .artistas__button .next {
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    display: inline-block; }
 
 .introc {
   padding-left: 7em;

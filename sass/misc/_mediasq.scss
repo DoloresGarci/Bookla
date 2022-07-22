@@ -1,4 +1,8 @@
-@media screen and (max-width: 479px){
+@media screen and (max-width: 576px){
+    h2{
+        font-size: 30px;
+    }
+    /*---HEADER---*/
     header{
         width: 84%;
         height: 2em;
@@ -21,9 +25,10 @@
     .menu__cta{
         display: none;
     }
-    .menu__hambur{
-        display: flex;
+     .menu__hambur{ 
+        display: flex !important;
     }
+    /*---HOME (LANDING)---*/
     .landing{
         margin-left: 2em;
         margin-right: 2em;
@@ -38,6 +43,7 @@
         grid-template-rows: repeat(4, auto);
         grid-column-gap: 2em;
         row-gap: 1em;
+        text-align: center;
         .landing__title{
             margin-bottom: 0;
             text-align: center;
@@ -47,27 +53,39 @@
             text-align: center;
          }
     }
+    /*---HOME (COLECCIONES)---*/
     .colecciones{
         margin: 2em auto 0px;
-        /*width: 84%;*/
-        .colecciones__1, .colecciones__2, .colecciones__3{
-            /*display: inline-block;*/
-            background-color: #f5e7dc;
-            box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
-            border-radius: 13px;
-            height: 15em;
-            .colecciones__card--titulo{
-                font-family: 'Elephant';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 1.3em;
-                color: #000000;
-                text-decoration: none;
+        padding: 0px 0px;
+        align-items: center;
+        .colecciones__cards{
+            .colecciones__1, .colecciones__2, .colecciones__3{
+                background-color: #f5e7dc;
+                box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+                border-radius: 13px;
+                height: auto;
+                padding: 2rem;
+                width: 75%;
+                .colecciones__card--titulo{
+                    font-family: 'Elephant';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 1.3em;
+                    color: #000000;
+                    text-decoration: none;
+                }
+                .colecciones__informacion{
+                    margin-top: 0.5rem;
+                }
+                .colecciones__cta{
+                    margin: 2rem 32% 0px;
+                    align-items: center;
+                }
             }
         }
     }
+    /*---HOME (EXPERIENCIA)---*/
     .experiencia{
-        padding-left: 2em;
         display: grid;
         grid-template-areas: 
         "titulo"
@@ -82,12 +100,16 @@
         }
         .experiencia__titulo{
             text-align: center;
+            padding-right: 0%;
         }
-        .experiencia__text{
+        .experiencia__texto{
             margin: auto 0px;
             width: auto;
+            padding-right: 0%;
+            text-align: center;
         }
     }
+    /*---HOME (PLAN IDEAL)---*/
     .plan{
         padding: 2em 2em;
         .plan__text{
@@ -97,6 +119,7 @@
             font-size: 30px;
         }
     }
+    /*---HOME (REGALOS)---*/
     .regala{
         margin:3em 2em;
         display: grid;
@@ -110,4 +133,59 @@
         row-gap: 2em;
         text-align: center;
     }
+    /*---REGALA (INTRO)---*/
+    .intror{
+        margin: 7rem auto 0px;
+        width: 84%;
+        text-align: center;
+        padding: 0%;
+    }
+    /*---REGALA (REGBOX)---*/
+    .regbox{
+        align-items: center;
+        width: 80%;
+        margin: 5rem auto 0px;
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "texto"
+            "boton"
+            "img";
+        text-align: center;
+        .regbox__buttons{
+            margin-bottom: 2rem;
+        }
+        .regbox__photo{
+            height: 84%;
+            width: auto;
+        }
+    }
+    /*---REGALA (REGGIFT)---*/
+    .reggift{
+        align-items: center;
+        width: 80%;
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "texto"
+            "boton"
+            "img";
+        margin: 5rem auto 0px;
+        text-align: center;
+        .reggift__photo{
+            height: 57%;
+        }
+    }
+
+    /*---FOOTER---*/
+    /*.footer{
+        display: grid;
+        margin-top: 4em;
+        padding: 1em 2em;
+        background-color: #F36A46;
+        grid-template-areas: "logo logo logo"
+        "col1 col2 col3"
+        "col1 col2 col3"
+        "col1 col2 col3";
+    }*/
 }

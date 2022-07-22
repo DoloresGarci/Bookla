@@ -486,15 +486,6 @@ ul .colecciones__informacion{
     display: inline;
 }
 
-.artistas__card1, .artistas__card2, .artistas__card3, .artistas__card4{
-    display: inline-block;
-    background-color: #F6E3D3;
-    width: 24%;
-    padding: 1.5em;
-    margin: 1em;
-    border-radius: 13px;
-} 
-
 .artistas__card{
     display: inline-block;
     background-color: #F6E3D3;

@@ -289,7 +289,48 @@
     }
 /*---COLECCIONES (box anterior)---*/
     
+/*---BOXAN (mes 1)---*/
+.boxficcion, .boxficcion2, .boxficcion3 {
+    align-items: center;
+    width: 80%;
+    margin: 5rem auto 0px;
+    display: grid;
+    grid-template-areas:
+        "mes"
+        "titulo"
+        "texto"
+        "img";
+    text-align: center;
+    .boxficcion__titulo{
+        grid-area: titulo;
+        margin-bottom: 1rem;
+    }
+    .boxficcion__photo{
+        height: 75%;
+    }
+}
 
+/*---BOXAN (suscripcion)---*/
+
+.suscripcion{
+    padding:2rem 0%;
+    background-color: #F36A46;
+    margin: 5em auto 2em;
+    width: 100%;
+    text-align: center;
+    .suscripcion__titulo{
+        font-size: 30px;
+    }
+    .suscripcion__text{
+        width: 70%;
+        font-family: 'Almarai';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.2em;
+        color: #F6E3D3;
+        margin: 0 auto 2em;
+    }
+}
 
     /*---FOOTER---*/
     /*.footer{

@@ -147,25 +147,46 @@ header {
 .footer {
   margin-top: 4em;
   padding: 1.75em 7em;
-  background-color: #F36A46; }
+  background-color: #F36A46;
+  color: #F6E3D3; }
   .footer .footer__text {
     font-family: 'Almarai';
     font-style: normal;
     font-weight: 300;
     font-size: 1em;
     margin-top: 1.5em;
-    position: relative;
-    top: 0%; }
-    .footer .footer__text .footer__col1, .footer .footer__text .footer__col2, .footer .footer__text .footer__col3 {
-      list-style-type: none;
-      margin: 0px 6em 0px 0em;
-      padding: 0px;
-      display: inline-block; }
-      .footer .footer__text .footer__col1 .footer__item, .footer .footer__text .footer__col2 .footer__item, .footer .footer__text .footer__col3 .footer__item {
-        color: #F6E3D3;
-        display: block;
-        padding: 0.3em 0px;
-        text-decoration: none; }
+    color: #F6E3D3;
+    text-decoration: none;
+    display: grid;
+    grid-template-areas: "ia iia iiia" "ib iib iiib" ". iic iiic";
+    grid-column: 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr; }
+    .footer .footer__text ul {
+      list-style: none; }
+      .footer .footer__text ul .ia {
+        grid-area: ia;
+        color: #F6E3D3; }
+      .footer .footer__text ul .ib {
+        grid-area: ib;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iia {
+        grid-area: iia;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iib {
+        grid-area: iib;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iic {
+        grid-area: iic;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iiia {
+        grid-area: iiia;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iiib {
+        grid-area: iiib;
+        color: #F6E3D3; }
+      .footer .footer__text ul .iiic {
+        grid-area: iiic;
+        color: #F6E3D3; }
 
 .colecciones--nav {
   font-family: 'Almarai';
@@ -1068,6 +1089,36 @@ header {
     .form .form__texto {
       text-align: center; }
   /*---COLECCIONES (box anterior)---*/
+  /*---BOXAN (mes 1)---*/
+  .boxficcion, .boxficcion2, .boxficcion3 {
+    align-items: center;
+    width: 80%;
+    margin: 5rem auto 0px;
+    display: grid;
+    grid-template-areas: "mes" "titulo" "texto" "img";
+    text-align: center; }
+    .boxficcion .boxficcion__titulo, .boxficcion2 .boxficcion__titulo, .boxficcion3 .boxficcion__titulo {
+      grid-area: titulo;
+      margin-bottom: 1rem; }
+    .boxficcion .boxficcion__photo, .boxficcion2 .boxficcion__photo, .boxficcion3 .boxficcion__photo {
+      height: 75%; }
+  /*---BOXAN (suscripcion)---*/
+  .suscripcion {
+    padding: 2rem 0%;
+    background-color: #F36A46;
+    margin: 5em auto 2em;
+    width: 100%;
+    text-align: center; }
+    .suscripcion .suscripcion__titulo {
+      font-size: 30px; }
+    .suscripcion .suscripcion__text {
+      width: 70%;
+      font-family: 'Almarai';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2em;
+      color: #F6E3D3;
+      margin: 0 auto 2em; }
   /*---FOOTER---*/
   /*.footer{
         display: grid;

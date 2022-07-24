@@ -254,7 +254,7 @@
         .puntos__photo{
             display: inline-block;
             grid-area: img;
-            height: 80%;
+            height: 73%;
         }
         .puntos__importantes{
             .puntos__lista{
@@ -331,16 +331,28 @@
         margin: 0 auto 2em;
     }
 }
-
+    /*---NAV-COLECCIONES---*/
+    .colecciones--nav{
+        font-size: 1.1em;
+        text-align: center;
+        .colecciones__ficcion, .colecciones__feminismo, .colecciones__nacional{
+            padding: 1.5em;
+            .colecciones__ficcion:hover, .colecciones__feminismo:hover, .colecciones__nacional:hover{
+                padding: 1.5em;
+            }
+        }
+    }
+    
     /*---FOOTER---*/
-    /*.footer{
+    .footer{
         display: grid;
         margin-top: 4em;
         padding: 1em 2em;
         background-color: #F36A46;
-        grid-template-areas: "logo logo logo"
-        "col1 col2 col3"
-        "col1 col2 col3"
-        "col1 col2 col3";
-    }*/
+        grid-template-areas:
+        "ia ic"
+        "iia iic"
+        "ib iiic"
+        "iib iiib";
+    }
 }

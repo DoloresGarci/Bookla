@@ -157,34 +157,36 @@ header {
     margin-top: 1.5em;
     color: #F6E3D3;
     text-decoration: none;
+    width: 60%;
     display: grid;
     grid-template-areas: "ia iia iiia" "ib iib iiib" ". iic iiic";
-    grid-column: 1fr 1fr 1fr;
-    grid-row: 1fr 1fr 1fr; }
-    .footer .footer__text ul {
-      list-style: none; }
-      .footer .footer__text ul .ia {
+    grid-column: auto auto auto;
+    grid-row: auto auto auto;
+    list-style: none; }
+    .footer .footer__text ul li a {
+      color: #F6E3D3; }
+      .footer .footer__text ul li a .ia {
         grid-area: ia;
         color: #F6E3D3; }
-      .footer .footer__text ul .ib {
+      .footer .footer__text ul li a .ib {
         grid-area: ib;
         color: #F6E3D3; }
-      .footer .footer__text ul .iia {
+      .footer .footer__text ul li a .iia {
         grid-area: iia;
         color: #F6E3D3; }
-      .footer .footer__text ul .iib {
+      .footer .footer__text ul li a .iib {
         grid-area: iib;
         color: #F6E3D3; }
-      .footer .footer__text ul .iic {
+      .footer .footer__text ul li a .iic {
         grid-area: iic;
         color: #F6E3D3; }
-      .footer .footer__text ul .iiia {
+      .footer .footer__text ul li a .iiia {
         grid-area: iiia;
         color: #F6E3D3; }
-      .footer .footer__text ul .iiib {
+      .footer .footer__text ul li a .iiib {
         grid-area: iiib;
         color: #F6E3D3; }
-      .footer .footer__text ul .iiic {
+      .footer .footer__text ul li a .iiic {
         grid-area: iiic;
         color: #F6E3D3; }
 
@@ -1070,7 +1072,7 @@ header {
     .puntos .puntos__photo {
       display: inline-block;
       grid-area: img;
-      height: 80%; }
+      height: 73%; }
     .puntos .puntos__importantes .puntos__lista .puntos__lista2 .puntos__item {
       font-size: 1.2em; }
   /*---COLECCIONES (FORM)---*/
@@ -1119,14 +1121,18 @@ header {
       font-size: 1.2em;
       color: #F6E3D3;
       margin: 0 auto 2em; }
+  /*---NAV-COLECCIONES---*/
+  .colecciones--nav {
+    font-size: 1.1em;
+    text-align: center; }
+    .colecciones--nav .colecciones__ficcion, .colecciones--nav .colecciones__feminismo, .colecciones--nav .colecciones__nacional {
+      padding: 1.5em; }
+      .colecciones--nav .colecciones__ficcion .colecciones__ficcion:hover, .colecciones--nav .colecciones__ficcion .colecciones__feminismo:hover, .colecciones--nav .colecciones__ficcion .colecciones__nacional:hover, .colecciones--nav .colecciones__feminismo .colecciones__ficcion:hover, .colecciones--nav .colecciones__feminismo .colecciones__feminismo:hover, .colecciones--nav .colecciones__feminismo .colecciones__nacional:hover, .colecciones--nav .colecciones__nacional .colecciones__ficcion:hover, .colecciones--nav .colecciones__nacional .colecciones__feminismo:hover, .colecciones--nav .colecciones__nacional .colecciones__nacional:hover {
+        padding: 1.5em; }
   /*---FOOTER---*/
-  /*.footer{
-        display: grid;
-        margin-top: 4em;
-        padding: 1em 2em;
-        background-color: #F36A46;
-        grid-template-areas: "logo logo logo"
-        "col1 col2 col3"
-        "col1 col2 col3"
-        "col1 col2 col3";
-    }*/ }
+  .footer {
+    display: grid;
+    margin-top: 4em;
+    padding: 1em 2em;
+    background-color: #F36A46;
+    grid-template-areas: "ia ic" "iia iic" "ib iiic" "iib iiib"; } }

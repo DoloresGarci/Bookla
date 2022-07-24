@@ -11,43 +11,49 @@
         margin-top: 1.5em;
         color: $fondo;
         text-decoration: none;
+        width: 60%;
         display: grid;
         grid-template-areas: "ia iia iiia" "ib iib iiib" ". iic iiic";
-        grid-column: 1fr 1fr 1fr;
-        grid-row: 1fr 1fr 1fr;
+        grid-column: auto auto auto;
+        grid-row: auto auto auto;
+        list-style: none;
         ul{
-            list-style: none;
-            .ia{
-                grid-area: ia;
-                color: $fondo;
-            }
-            .ib{
-                grid-area: ib;
-                color: $fondo;
-            }
-            .iia{
-                grid-area: iia;
-                color: $fondo;
-            }
-            .iib{
-                grid-area: iib;
-                color: $fondo;
-            }
-            .iic{
-                grid-area: iic;
-                color: $fondo;
-            }
-            .iiia{
-                grid-area: iiia;
-                color: $fondo;
-            }
-            .iiib{
-                grid-area: iiib;
-                color: $fondo;
-            }
-            .iiic{
-                grid-area: iiic;
-                color: $fondo;
+            li{
+                a{
+                    color: $fondo;
+                    .ia{
+                        grid-area: ia;
+                        color: $fondo;
+                    }
+                    .ib{
+                        grid-area: ib;
+                        color: $fondo;
+                    }
+                    .iia{
+                        grid-area: iia;
+                        color: $fondo;
+                    }
+                    .iib{
+                        grid-area: iib;
+                        color: $fondo;
+                    }
+                    .iic{
+                        grid-area: iic;
+                        color: $fondo;
+                    }
+                    .iiia{
+                        grid-area: iiia;
+                        color: $fondo;
+                    }
+                    .iiib{
+                        grid-area: iiib;
+                        color: $fondo;
+                    }
+                    .iiic{
+                        grid-area: iiic;
+                        color: $fondo;
+                    }
+                }
             }
         }
     }

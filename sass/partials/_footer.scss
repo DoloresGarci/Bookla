@@ -18,7 +18,9 @@
         grid-row: auto auto auto;
         list-style: none;
         ul{
+            list-style: none;
             li{
+                list-style: none;
                 a{
                     color: $fondo;
                     .ia{

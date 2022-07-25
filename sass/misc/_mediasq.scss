@@ -229,9 +229,83 @@
         .artistas__contenedor{
             width: 84%;
             margin: 3rem auto;
+            .artistas__button{
+                display: none;
+            }
+            .artistas__cards{
+                .artistas__card{
+                    width: 84%;
+                }
+            }
         }
+
+
+
+        .artistas{  
+            margin-top: 5em;
+            padding-left: 7em;
+            padding-right: 6em;
+            background-color: #F36A46;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .artistas__titulo{
+            color: #F6E3D3;
+            font-size: 34px;
+            text-align: center;
+        }
+        .artistas__text{
+            width: 70%;
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1.2em;
+            color: #F6E3D3;
+            margin: 0 auto 2em;
+            text-align: center;
+        }
+        
+        .artistas__button{
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            display: inline-block;
+        }
+        .artistas__arrow{
+            display: inline-block;
+        }
+        
+        .artistas__cards{
+            display: inline;
+        }
+        
         .artistas__card{
-            width: 84%;
+            display: inline-block;
+            background-color: #F6E3D3;
+            width: 24%;
+            padding: 1.5em;
+            margin: 1em;
+            border-radius: 13px;
+        }
+        .artistas__img{
+            width: 100%;
+            margin-bottom: 1em;
+        }
+        .artistas__card--titulo{
+            font-family: 'Elephant';
+            font-style: normal;
+            font-size: 1.5em;
+            line-height: 29px;
+            color: #000000;
+        }
+        .artistas__card--text{
+            margin-top: 0.5em;
+            display: block;
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1em;
+            color: #000000;
         }
     }
  /*---COLECCIONES (INTRO)---*/
@@ -288,8 +362,49 @@
         }
     }
 /*---COLECCIONES (box anterior)---*/
+.boxan{  
+    align-items: center;
+    padding:0%;
+    margin: 3em auto;
+    background-color: #F6E3D3;
+    width: 90%;
+    .boxan__cards{
+        .boxan__card1, .boxan__card2, .boxan__card3{
+            display: inline-block;
+            background-color: #f5e7dc;
+            width: 80%;
+            padding: 1.5em;
+            border-radius: 13px;
+            box-shadow: 6px 9px 11px rgba(0, 0, 0, 0.12);
+        } 
+    }
+}
+
+
+
+.boxan__img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+.boxan__card--titulo{
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 29px;
+    color: #000000;
+}
+.boxan__card--text{
+    margin-top: 0.5em;
+    display: block;
+    font-family: 'Almarai';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    color: #000000;
+}
     
-/*---BOXAN (mes 1)---*/
+/*---BOXAN (meses)---*/
 .boxficcion, .boxficcion2, .boxficcion3 {
     align-items: center;
     width: 80%;
@@ -347,12 +462,31 @@
     .footer{
         display: grid;
         margin-top: 4em;
-        padding: 1em 2em;
+        padding: 2em 2em;
         background-color: #F36A46;
         grid-template-areas:
-        "ia ic"
-        "iia iic"
-        "ib iiic"
-        "iib iiib";
+            "ia ic"
+            "iia iic"
+            "ib iiic"
+            "iib iiib";
+        height: 6em;
+        color: #F6E3D3;
+        .footer__text {
+            font-family: 'Almarai';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 0.9em;
+            margin-top: 2.5em;
+            color: #F6E3D3;
+            text-decoration: none;
+            width: 90%;
+            grid-column: auto auto auto;
+            grid-row: auto auto auto;
+            list-style: none;
+            padding: 0%;
+            column-gap: 10px;
+            left: 7%;
+            position: absolute;
+        }
     }
 }
